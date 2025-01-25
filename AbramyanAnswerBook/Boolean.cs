@@ -86,9 +86,9 @@
 // int a = int.Parse(Console.ReadLine()!);
 // Console.Write("Enter B: ");
 // int b = int.Parse(Console.ReadLine()!);
-// //bool onlyOneIsOdd = (a + b) % 2 != 0; // Variant #1
-// //bool onlyOneIsOdd = a % 2 != 0 && b % 2 == 0 || b % 2 == 0 && a % 2 != 0; // Variant #2
-// bool onlyOneIsOdd = a % 2 != 0 ^ b % 2 != 0; // Variant #3
+// //bool onlyOneIsOdd1 = (a + b) % 2 != 0; // Variant #1
+// //bool onlyOneIsOdd2 = a % 2 != 0 && b % 2 == 0 || b % 2 == 0 && a % 2 != 0; // Variant #2
+// bool onlyOneIsOdd3 = a % 2 != 0 ^ b % 2 != 0; // Variant #3
 // Console.WriteLine(onlyOneIsOdd);
 
 // Boolean 11. Даны два целых числа: A, B. Проверить истинность высказывания: «Числа A и B имеют одинаковую четность».

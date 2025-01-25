@@ -3,19 +3,19 @@
 
 // Case 1. Дано целое число в диапазоне 1–7. Вывести строку — название дня недели,
 // соответствующее данному числу (1 — «понедельник», 2 — «вторник» и т.д.)
-Console.Write("Введите день недели: ");
-int dayOfWeek = int.Parse(Console.ReadLine()!);
-switch (dayOfWeek)
-{
-    case 1: Console.WriteLine("Понедельник"); break;
-    case 2: Console.WriteLine("Вторник"); break;
-    case 3: Console.WriteLine("Среда"); break;
-    case 4: Console.WriteLine("Четверг"); break;
-    case 5: Console.WriteLine("Пятница"); break;
-    case 6: Console.WriteLine("Суббота"); break;
-    case 7: Console.WriteLine("Воскресенье"); break;
-    default: Console.WriteLine("Введите число в диапазоне 1-7!"); break;
-}
+// Console.Write("Введите день недели: ");
+// int dayOfWeek = int.Parse(Console.ReadLine()!);
+// switch (dayOfWeek)
+// {
+//     case 1: Console.WriteLine("Понедельник"); break;
+//     case 2: Console.WriteLine("Вторник"); break;
+//     case 3: Console.WriteLine("Среда"); break;
+//     case 4: Console.WriteLine("Четверг"); break;
+//     case 5: Console.WriteLine("Пятница"); break;
+//     case 6: Console.WriteLine("Суббота"); break;
+//     case 7: Console.WriteLine("Воскресенье"); break;
+//     default: Console.WriteLine("Введите число в диапазоне 1-7!"); break;
+// }
 
 
 
