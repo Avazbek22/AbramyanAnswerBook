@@ -180,6 +180,15 @@
 //     Console.WriteLine(c);
 
 // If 13. Даны три числа. Найти среднее из них (то есть число, расположенное между наименьшим и наибольшим).
+/*
+ * Варианты:
+ * 123
+ * 321
+ * 132
+ * 213
+ * 312
+ * 231
+ */
 // Console.Write("Enter A: ");
 // int a = int.Parse(Console.ReadLine()!);
 // Console.Write("Enter B: ");

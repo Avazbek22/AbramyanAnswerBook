@@ -60,21 +60,20 @@
 
 
 
-// Case 6. Единицы длины пронумерованы следующим образом: 1 — дециметр, 2 — километр, 3 — метр, 4 — миллиметр, 
-// 5 — сантиметр. Дан номер единицы длины (целое число в диапазоне 1–5)
-// и длина отрезка в этих единицах (вещественное число). Найти длину отрезка в метрах.
-// Console.Write("Введите номер единицы длины: ");
-// int unit = int.Parse(Console.ReadLine()!);
-// Console.Write("Введите длину отрезка: ");
-// double length = double.Parse(Console.ReadLine()!);
-// switch (unit)
+//Case 6. Единицы длины пронумерованы следующим образом: 1 — дециметр, 2 — километр, 3 — метр, 4 — миллиметр, 5 — сантиметр.
+//Дан номер единицы длины (целое число в диапазоне 1–5) и длина отрезка в этих единицах (вещественное число).
+//Найти длину отрезка в метрах.
+// Console.Write("Введите номер действия: ");
+// int lengthInMeters = int.Parse(Console.ReadLine());
+// Console.Write("Длинна отрезка: ");
+// int unitsOfLength =  int.Parse(Console.ReadLine());
+// switch (lengthInMeters)
 // {
-//     case 1: Console.WriteLine($"{length / 10} м"); break;
-//     case 2: Console.WriteLine($"{length * 1000} м"); break;
-//     case 3: Console.WriteLine($"{length} м"); break;
-//     case 4: Console.WriteLine($"{length / 1000} м"); break;
-//     case 5: Console.WriteLine($"{length / 100} м"); break;
-//     default: Console.WriteLine("Введите номер единицы в диапазоне 1-5!"); break;
+//     case 1: Console.WriteLine(unitsOfLength / 10); break;
+//     case 2: Console.WriteLine(unitsOfLength * 1000); break;
+//     case 3: Console.WriteLine(unitsOfLength); break;
+//     case 4: Console.WriteLine(unitsOfLength / 1000); break;
+//     case 5: Console.WriteLine(unitsOfLength / 100); break;
 // }
 
 
