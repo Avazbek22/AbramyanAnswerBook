@@ -61,7 +61,7 @@
 // Integer 10. Дано трехзначное число. Вывести вначале его последнюю цифру (единицы), а затем — его среднюю цифру (десятки).
 // Console.Write("Enter N: ");
 // int n = int.Parse(Console.ReadLine()!);
-// Console.WriteLine(n % 100 % 10);
+// Console.WriteLine($"{n % 10} {n / 10 % 10}");
 
 // Integer 11. Дано трехзначное число. Найти сумму и произведение его цифр
 // Console.Write("Enter N: ");
