@@ -1,5 +1,6 @@
 ﻿// IF: 1-20, 22, 29-30
 
+// Путь к сеньору: https://www.youtube.com/watch?v=avCAbzzcTEM&list=PL5lgqZ5vlRRYAgjoNF240pV86qP0JOEEg&index=9&ab_channel=%D0%9F%D1%83%D1%82%D1%8C%D0%BASenior-%D1%83
 
 // If 1. Дано целое число. Если оно является положительным, то прибавить к нему 1;
 // в противном случае не изменять его. Вывести полученное число.

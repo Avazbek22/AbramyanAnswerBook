@@ -1,5 +1,7 @@
 ﻿// Bool: 1-23 25-28, 30, 34-37
 
+// Путь к сеньору: https://www.youtube.com/watch?v=Ll50o1seax8&list=PL5lgqZ5vlRRYAgjoNF240pV86qP0JOEEg&index=8&ab_channel=%D0%9F%D1%83%D1%82%D1%8C%D0%BASenior-%D1%83
+
 // !    НЕ
 // !=   НЕ РАВНО
 // ==   РАВНО
@@ -8,7 +10,6 @@
 // <=   МЕНЬШЕ ИЛИ РАВНО
 // >=   БОЛЬШЕ ИЛИ РАВНО
 // &&   И
-
 // ||   ИЛИ
 // ^    ИСКЛЮЧАЮЩЕЕ ИЛИ
 
@@ -89,7 +90,7 @@
 // int b = int.Parse(Console.ReadLine()!);
 // //bool onlyOneIsOdd1 = (a + b) % 2 != 0; // Variant #1
 // //bool onlyOneIsOdd2 = a % 2 != 0 && b % 2 == 0 || b % 2 == 0 && a % 2 != 0; // Variant #2
-// //bool onlyOneIsOdd3 = a % 2 != 0 ^ b % 2 != 0; // Variant #3
+// bool onlyOneIsOdd3 = a % 2 != 0 ^ b % 2 != 0; // Variant #3
 // Console.WriteLine(onlyOneIsOdd3);
 
 // Boolean 11. Даны два целых числа: A, B. Проверить истинность высказывания: «Числа A и B имеют одинаковую четность».

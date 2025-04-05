@@ -1,4 +1,9 @@
-﻿// Begin: 1-12, 16, 20, 22-24, 31-34
+﻿// IT-Life Базовый синтаксис: https://youtu.be/G2f6-6pNaxU
+// IT-Life Переменные: https://youtu.be/KUu8nTq0J3A
+// IT-Life Типы данных: https://youtu.be/Mnj-FQS4XTE
+// IT-Life var & object: https://youtu.be/8ZiuvHKCKcE
+
+// Begin: 1-12, 16, 20, 22-24, 31-34
 
 
 // Begin 1. Дана сторона квадрата a. Найти его периметр P = 4·a.

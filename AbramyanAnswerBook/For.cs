@@ -1,5 +1,6 @@
 ﻿//For: 1-20, 33, 36-40
 
+// Путь к сеньору: https://www.youtube.com/watch?v=JYhw1vBQ9KU&list=PL5lgqZ5vlRRYAgjoNF240pV86qP0JOEEg&index=13&ab_channel=%D0%9F%D1%83%D1%82%D1%8C%D0%BASenior-%D1%83
 
 // For 1. Даны целые числа K и N (N > 0). Вывести N раз число K.
 // Console.Write("Enter K: ");
