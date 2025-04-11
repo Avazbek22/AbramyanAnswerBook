@@ -6,6 +6,37 @@ namespace AbramyanAnswerBook
     {
         static Random rnd = new Random(DateTime.Now.Millisecond);
 
+        /// <summary>
+        /// Outputs all the elements of the array vertical or horizontal
+        /// </summary>
+        /// <param name="array"></param>
+        /// <param name="horizontalPrint"></param>
+        /// <typeparam name="T"></typeparam>
+        static void ShowArray<T>(T[] array, bool horizontalPrint = false) where T : struct
+        {
+            if (horizontalPrint)
+            {
+                Console.WriteLine(string.Join(' ', array));
+            }
+            else
+            {
+                for (int i = 0; i < array.Length; i++)
+                    Console.WriteLine($"[{i}] = {array[i]}");
+            }
+            
+            Console.WriteLine();
+        }
+
+        static int[] RandomFillArray(int length, int minValue, int maxValue)
+        {
+            int[] array = new int[length];
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = rnd.Next(minValue, maxValue);
+            }
+            return array;
+        }
+
         static void Array9()
         {
             // Array 9. Дан целочисленный массив размера N.
