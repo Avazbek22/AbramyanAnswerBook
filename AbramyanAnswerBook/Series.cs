@@ -283,3 +283,185 @@
 //     previous = current;
 // }
 // Console.WriteLine(index != 0 ? $"Index: {index}" : "0");
+
+
+// Series29. Даны целые числа K, N, а также K наборов целых чисел по N элементов в каждом наборе.
+// Вывести общую сумму всех элементов, входящих в данные наборы.
+// Console.Write("Enter K: ");
+// int k = int.Parse(Console.ReadLine()!);
+// Console.Write("Enter N: ");
+// int n = int.Parse(Console.ReadLine()!);
+// int sum = 0;
+// for (int i = 1; i <= k; i++)
+// {
+//     Console.WriteLine($"{i} Set:");
+//     for (int j = 1; j <= n; j++)
+//     {
+//         Console.Write($"[{j}] = ");
+//         sum += int.Parse(Console.ReadLine()!);
+//     }
+// }
+// Console.WriteLine($"Total sum: {sum}");
+
+
+// Series 30. Даны целые числа K, N, а также K наборов целых чисел по N элементов в каждом наборе.
+// Для каждого набора вывести сумму его элементов
+// Console.Write("Enter K: ");
+// int k = int.Parse(Console.ReadLine()!);
+// Console.Write("Enter N: ");
+// int n = int.Parse(Console.ReadLine()!);
+// for (int i = 1; i <= k; i++)
+// {
+//     int sum = 0;
+//     Console.WriteLine($"{i} Set:");
+//     for (int j = 1; j <= n; j++)
+//     {
+//         Console.Write($"[{j}] = ");
+//         sum += int.Parse(Console.ReadLine()!);
+//     }
+//     Console.WriteLine($"Sum of {i} set is: {sum}");
+// }
+
+
+// Series 31. Даны целые числа K, N, а также K наборов целых чисел по N элементов в каждом наборе.
+// Найти количество наборов, содержащих число 2. Если таких наборов нет, то вывести 0.
+// Console.Write("Enter K: ");
+// int k = int.Parse(Console.ReadLine()!);
+// Console.Write("Enter N: ");
+// int n = int.Parse(Console.ReadLine()!);
+// int count = 0, num;
+// for (int i = 1; i <= k; i++)
+// {
+//     bool hasSequenceTwo = false;
+//     Console.WriteLine($"{i} Set:");
+//     for (int j = 1; j <= n; j++)
+//     {
+//         Console.Write($"[{j}] = ");
+//         num = int.Parse(Console.ReadLine()!);
+//         if (num == 2)
+//             hasSequenceTwo = true;
+//     }
+//
+//     if (hasSequenceTwo)
+//         count++;
+// }
+// Console.WriteLine($"Count of sets containing the number 2 is: {count}");
+
+
+// Series 32. Даны целые числа K, N, а также K наборов целых чисел по N элементов в каждом наборе.
+// Для каждого набора вывести номер его первого элемента, равного 2, или число 0, если в данном наборе нет двоек.
+// Console.Write("Enter K: ");
+// int k = int.Parse(Console.ReadLine()!);
+// Console.Write("Enter N: ");
+// int n = int.Parse(Console.ReadLine()!);
+// for (int i = 1, num; i <= k; i++)
+// {
+//     int firstIndex = 0;
+//     Console.WriteLine($"{i} Set:");
+//     for (int j = 1; j <= n; j++)
+//     {
+//         Console.Write($"[{j}] = ");
+//         num = int.Parse(Console.ReadLine()!);
+//         if (num == 2 && firstIndex == 0)
+//             firstIndex = j;
+//     }
+//     Console.WriteLine(firstIndex != 0 ? $"First index: {firstIndex}" : "0");
+// }
+
+
+// Series 33. Даны целые числа K, N, а также K наборов целых чисел по N элементов в каждом наборе.
+// Для каждого набора вывести номер его последнего элемента, равного 2, или число 0, если в данном наборе нет двоек.
+// Console.Write("Enter K: ");
+// int k = int.Parse(Console.ReadLine()!);
+// Console.Write("Enter N: ");
+// int n = int.Parse(Console.ReadLine()!);
+// for (int i = 1, num; i <= k; i++)
+// {
+//     int lastIndex = 0;
+//     Console.WriteLine($"{i} Set:");
+//     for (int j = 1; j <= n; j++)
+//     {
+//         Console.Write($"[{j}] = ");
+//         num = int.Parse(Console.ReadLine()!);
+//         if (num == 2)
+//             lastIndex = j;
+//     }
+//     Console.WriteLine(lastIndex != 0 ? $"Last index: {lastIndex}" : "0");
+// }
+
+
+// Series 34. Даны целые числа K, N, а также K наборов целых чисел по N элементов в каждом наборе.
+// Для каждого набора выполнить следующее действие:
+// если в наборе содержится число 2, то вывести сумму его элементов; если в наборе нет двоек, то вывести 0.
+// Console.Write("Enter K: ");
+// int k = int.Parse(Console.ReadLine()!);
+// Console.Write("Enter N: ");
+// int n = int.Parse(Console.ReadLine()!);
+// for (int i = 1, num; i <= k; i++)
+// {
+//     int sum = 0;
+//     bool hasSequenceTwo = false;
+//     Console.WriteLine($"{i} Set:");
+//     for (int j = 1; j <= n; j++)
+//     {
+//         Console.Write($"[{j}] = ");
+//         num = int.Parse(Console.ReadLine()!);
+//         sum += num;
+//         
+//         if (num == 2)
+//             hasSequenceTwo = true;
+//     }
+//     Console.WriteLine(hasSequenceTwo ? $"Sum: {sum}" : "0");
+// }
+
+
+// Series 35. Дано целое число K, а также K наборов ненулевых целых чисел.
+// Признаком завершения каждого набора является число 0.
+// Для каждого набора вывести количество его элементов. Вывести также общее количество элементов во всех наборах.
+// Console.Write("Enter K: ");
+// int k = int.Parse(Console.ReadLine()!);
+// int totalCount = 0;
+// for (int i = 1; i <= k; i++)
+// {
+//     int number, count = 0;
+//     Console.WriteLine($"{i} Set:");
+//     do
+//     {
+//         Console.Write($"Number: ");
+//         number = int.Parse(Console.ReadLine()!);
+//         count++;
+//
+//     } while (number != 0);
+//
+//     totalCount += --count;
+//     Console.WriteLine($"Numbers count of {i} set is: {count}");
+// }
+// Console.WriteLine($"Total count: {totalCount}");
+
+
+// Series 36. Дано целое число K, а также K наборов ненулевых целых чисел.
+// Каждый набор содержит не менее двух элементов, признаком его завершения является число 0.
+// Найти количество наборов, элементы которых возрастают
+// Console.Write("Enter K: ");
+// int k = int.Parse(Console.ReadLine()!);
+// int countOfIncreasingSequences = 0;
+// for (int i = 1; i <= k; i++)
+// {
+//     bool isIncreasingSequence = true;
+//     int current, previous = int.MinValue;
+//     Console.WriteLine($"{i} Set:");
+//     do
+//     {
+//         Console.Write($"Number: ");
+//         current = int.Parse(Console.ReadLine()!);
+//         if (current <= previous && current != 0)
+//             isIncreasingSequence = false;
+//
+//         previous = current;
+//
+//     } while (current != 0);
+//
+//     if (isIncreasingSequence)
+//         countOfIncreasingSequences++;
+// }
+// Console.WriteLine($"Count of increasing sequences: {countOfIncreasingSequences}");
