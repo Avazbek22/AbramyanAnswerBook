@@ -9,8 +9,8 @@
 //     sum += double.Parse(Console.ReadLine()!);
 // }
 // Console.WriteLine($"Sum: {sum}");
-
-// Variant #2
+//
+// // Variant #2
 // Console.Write("Enter a sequence of 10 numbers in line: ");
 // Console.WriteLine("Sum: " + Console.ReadLine()!.Split(' ',StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).Sum());
 
