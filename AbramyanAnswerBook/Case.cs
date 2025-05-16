@@ -2,6 +2,7 @@
 
 // Путь к сеньору: https://www.youtube.com/watch?v=BrrbnKqc0EE&list=PL5lgqZ5vlRRYAgjoNF240pV86qP0JOEEg&index=10&ab_channel=%D0%9F%D1%83%D1%82%D1%8C%D0%BASenior-%D1%83
 
+
 // Case 1. Дано целое число в диапазоне 1–7. Вывести строку — название дня недели,
 // соответствующее данному числу (1 — «понедельник», 2 — «вторник» и т.д.)
 // Console.Write("Введите день недели: ");
@@ -135,7 +136,7 @@
 //         case 19: Console.Write("Девятнадцать "); break;
 //     }
 //
-//     Console.WriteLine("учебных задания");
+//     Console.WriteLine("учебных заданий");
 // }
 // else
 // {
