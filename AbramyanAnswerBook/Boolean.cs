@@ -1,6 +1,7 @@
 ﻿// Bool: 1-23 25-28, 30, 34-37
 
 // Путь к сеньору: https://www.youtube.com/watch?v=Ll50o1seax8&list=PL5lgqZ5vlRRYAgjoNF240pV86qP0JOEEg&index=8&ab_channel=%D0%9F%D1%83%D1%82%D1%8C%D0%BASenior-%D1%83
+// SimpleCode: https://www.youtube.com/watch?v=9o8opcKO0f0&t=1143s&ab_channel=%23SimpleCode
 
 // !    НЕ
 // !=   НЕ РАВНО
