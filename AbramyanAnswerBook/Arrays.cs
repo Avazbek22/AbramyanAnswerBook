@@ -113,9 +113,8 @@ namespace AbramyanAnswerBook
             int a = int.Parse(Console.ReadLine()!);
             Console.Write("Enter D: ");
             int d = int.Parse(Console.ReadLine()!);
-            array[0] = a;
-            for (int i = 1; i < array.Length; i++)
-                array[i] = array[i - 1] + d;
+            for (int i = 0; i < array.Length; i++)
+                array[i] = a + i * d;
             
             ShowArray(array);
             
@@ -583,7 +582,7 @@ namespace AbramyanAnswerBook
 
         static void Array25()
         {
-            // Array25. Дан массив ненулевых целых чисел размера N.
+            // Array 25. Дан массив ненулевых целых чисел размера N.
             // Проверить, образуют ли его элементы геометрическую прогрессию.
             // Если образуют, то вывести знаменатель прогрессии, если нет — вывести 0.
             
@@ -607,7 +606,7 @@ namespace AbramyanAnswerBook
 
         static void Array26()
         {
-            // Array26. Дан целочисленный массив размера N. Проверить, чередуются ли в нем четные и нечетные числа.
+            // Array 26. Дан целочисленный массив размера N. Проверить, чередуются ли в нем четные и нечетные числа.
             // Если чередуются, то вывести 0, если нет, то вывести порядковый номер первого элемента, нарушающего закономерность.
             
             Console.Write("Enter N: ");
@@ -651,21 +650,200 @@ namespace AbramyanAnswerBook
         
         static void Array28()
         {
-            // Array28. Дан массив A размера N. Найти минимальный элемент 
-            // из его элементов с четными номерами: A2, A4, A6,. . . .
+            // Array 28. Дан массив A размера N.
+            // Найти минимальный элемент из его элементов с четными номерами: A2, A4, A6,. . .
             Console.Write("Enter N: ");
             int n = int.Parse(Console.ReadLine()!);
             int[] array = RandomFillArray(n, 21);
+            ShowArray(array); 
+            
             int minValue = array[0];
-            Console.WriteLine("-------------------------------");
             for (int i = 2; i < array.Length; i += 2) 
             {
                 if (array[i] < minValue)
-                {
                     minValue = array[i];
+            }
+            Console.WriteLine($"Min value: {minValue}");
+        }
+
+        static void Array29()
+        {
+            // Array 29. Дан массив A размера N.
+            // Найти максимальный элемент из его элементов с нечетными номерами: A1, A3, A5, . . . .
+            
+            Console.Write("Enter N: ");
+            int n = int.Parse(Console.ReadLine()!);
+            int[] array = RandomFillArray(n, 21);
+            ShowArray(array);
+            
+            int maxValue = array[1];
+            for (int i = 3; i < array.Length; i += 2) 
+            {
+                if (array[i] > maxValue)
+                    maxValue = array[i];
+            }
+            Console.WriteLine($"Max value: {maxValue}");
+        }
+
+        static void Array30()
+        {
+            // Array 30. Дан массив размера N. Найти номера тех элементов массива,
+            // которые больше своего правого соседа, и количество таких элементов.
+            // Найденные номера выводить в порядке их возрастания.
+            
+            Console.Write("Enter N: ");
+            int n = int.Parse(Console.ReadLine()!);
+            int[] array = RandomFillArray(n, 21);
+            ShowArray(array);
+
+            int count = 0;
+            Console.WriteLine("Result:");
+            for (int i = 0; i < array.Length - 1; i++)
+            {
+                if (array[i] > array[i + 1])
+                {
+                    Console.WriteLine($"[{i}] =  {array[i]}");
+                    count++;
                 }
             }
-            Console.WriteLine(minValue);
+
+            Console.WriteLine($"Count: {count}");
+        }
+
+        static void Array31()
+        {
+            // Array 31. Дан массив размера N. Найти номера тех элементов массива,
+            // которые больше своего левого соседа, и количество таких элементов.
+            // Найденные номера выводить в порядке их убывания.
+            
+            Console.Write("Enter N: ");
+            int n = int.Parse(Console.ReadLine()!);
+            int[] array = RandomFillArray(n, 21);
+            ShowArray(array);
+
+            int count = 0;
+            Console.WriteLine("Result:");
+            for (int i = array.Length - 1; i > 0; i--)
+            {
+                if (array[i] > array[i - 1])
+                {
+                    Console.WriteLine($"[{i}] =  {array[i]}");
+                    count++;
+                }
+            }
+            Console.WriteLine($"Count: {count}");
+        }
+
+        static void Array32()
+        {
+            // Array 32. Дан массив размера N. Найти номер его первого локального минимума
+            // (локальный минимум — это элемент, который меньше любого из своих соседей).
+
+            Console.Write("Enter N: ");
+            int n = int.Parse(Console.ReadLine()!);
+            int[] array = RandomFillArray(n, 21);
+            ShowArray(array);
+
+            for (int i = 1; i < array.Length - 1; i++)
+            {
+                if (array[i] < array[i - 1] && array[i] < array[i + 1])
+                {
+                    Console.WriteLine($"First local min is: [{i}] =  {array[i]}");
+                    break;
+                }
+            }
+        }
+
+        static void Array33()
+        {
+            // Array 33. Дан массив размера N. Найти номер его последнего локального максимума
+            // (локальный максимум — это элемент, который больше любого из своих соседей).
+            
+            Console.Write("Enter N: ");
+            int n = int.Parse(Console.ReadLine()!);
+            int[] array = RandomFillArray(n, 21);
+            ShowArray(array);
+            
+            for (int i = array.Length - 2; i > 0; i--)
+            {
+                if (array[i] > array[i - 1] && array[i] > array[i + 1])
+                {
+                    Console.WriteLine($"Last local max is: [{i}] =  {array[i]}");
+                    break;
+                }
+            }
+        }
+
+        static void Array34()
+        {
+            // Array34. Дан массив размера N. Найти максимальный из его локальных минимумов
+            // (определение локального минимума дано в задании Array32).
+            
+            Console.Write("Enter N: ");
+            int n = int.Parse(Console.ReadLine()!);
+            int[] array = RandomFillArray(n, 21);
+            ShowArray(array);
+
+            int maxLocalMin = int.MinValue;
+            for (int i = 1; i < array.Length - 1; i++)
+            {
+                if (array[i] < array[i - 1] && array[i] < array[i + 1] && array[i] > maxLocalMin)
+                    maxLocalMin = array[i];
+            }
+
+            Console.WriteLine($"Max local min value is: {maxLocalMin}");
+        }
+
+        static void Array35()
+        {
+            // Array 35. Дан массив размера N. Найти минимальный из его локальных максимумов
+            // (определение локального максимума дано в задании Array 33).
+            
+            Console.Write("Enter N: ");
+            int n = int.Parse(Console.ReadLine()!);
+            int[] array = RandomFillArray(n, 21);
+            ShowArray(array);
+            
+            int minLocalMax = int.MaxValue;
+            for (int i = 1; i < array.Length - 1; i++)
+            {
+                if (array[i] > array[i - 1] && array[i] > array[i + 1] && array[i] < minLocalMax)
+                    minLocalMax = array[i];
+            }
+
+            Console.WriteLine($"Min local max value is: {minLocalMax}");
+        }
+
+        static void Array36()
+        {
+            // Array 36. Дан массив размера N. Найти максимальный из его элементов, не являющихся ни локальным минимумом,
+            // ни локальным максимумом (определения локального минимума и локального максимума даны в заданиях Array32 и Array33).
+            // Если таких элементов в массиве нет, то вывести 0.
+
+            Console.Write("Enter N: ");
+            int n = int.Parse(Console.ReadLine()!);
+            int[] array = RandomFillArray(n, 21);
+            ShowArray(array);
+            
+            int maxNotLocal = int.MinValue;
+            for (int i = 1; i < array.Length - 1; i++)
+            {
+                if (IsNotLocalMinAndNotLocalMax(i) && array[i] > maxNotLocal)
+                    maxNotLocal = array[i];
+            }
+
+            Console.WriteLine(maxNotLocal != int.MinValue ? $"Max not local min/max = {maxNotLocal}" : "0");
+
+            bool IsNotLocalMinAndNotLocalMax(int index)
+            {
+                return !(array[index] < array[index - 1] && array[index] < array[index + 1]) &&
+                       !(array[index] > array[index - 1] && array[index] > array[index + 1]);
+            }
+        }
+
+        static void Array37()
+        {
+            // Array 37. Дан массив размера N. Найти количество участков, на которых его элементы монотонно возрастают
         }
 
         static void Array40()
@@ -757,7 +935,7 @@ namespace AbramyanAnswerBook
         
         public static void Main()
         {
-            Array86();
+            Array3();
         }
     }
 }
