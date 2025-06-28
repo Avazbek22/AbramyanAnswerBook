@@ -933,9 +933,60 @@ namespace AbramyanAnswerBook
             ShowArray(array);
         }
         
+        static void Array89()
+        {
+            // Array89. Дан массив размера N, все элементы которого, кроме одного,
+            // упорядочены по убыванию. Переместить нарушающий элемент на верное место.
+
+            Console.Write("Enter N: ");
+            int n = int.Parse(Console.ReadLine()!);
+            int[] array = new int[n];
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write($"[{i}] = ");
+                array[i] = int.Parse(Console.ReadLine()!);
+            }
+
+            Console.WriteLine("---------------------------");
+
+            // 1) ищем первый индекс, где очередной элемент оказался больше предыдущего
+            int wrongIndex = -1;
+            for (int i = 1; i < array.Length; i++)
+            {
+                if (array[i - 1] < array[i])
+                {
+                    wrongIndex = i;
+                    break;
+                }
+            }
+
+            if (wrongIndex == -1)  // массив уже упорядочен
+            {
+                Console.WriteLine("Элемент, нарушающий убывание, не найден.");
+                return;
+            }
+            
+            if (wrongIndex < array.Length - 1 && array[wrongIndex] < array[wrongIndex + 1])
+            {
+                // Сдвиг вправо
+                for (int i = wrongIndex; i < array.Length - 1 && array[i] < array[i + 1]; i++)
+                    (array[i], array[i + 1]) = (array[i + 1], array[i]);
+            }
+            else
+            {
+                // Сдвиг влево
+                for (int j = wrongIndex; j > 0 && array[j] > array[j - 1]; j--)
+                    (array[j], array[j - 1]) = (array[j - 1], array[j]);
+            }
+
+            ShowArray(array);
+        }
+
+        
         public static void Main()
         {
-            Array3();
+            Array89();
         }
     }
 }
