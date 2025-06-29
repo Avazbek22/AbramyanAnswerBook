@@ -844,6 +844,41 @@ namespace AbramyanAnswerBook
         static void Array37()
         {
             // Array 37. Дан массив размера N. Найти количество участков, на которых его элементы монотонно возрастают
+            
+            Console.Write("Enter N: ");
+            int n = int.Parse(Console.ReadLine()!);
+            int[] array = new int[n];
+
+            // ввод массива
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write($"[{i}] = ");
+                array[i] = int.Parse(Console.ReadLine()!);
+            }
+
+            Console.WriteLine("---------------------------");
+
+            int count = 0;       // количество монотонно возрастающих участков
+            bool inRun = false;  // находимся ли сейчас внутри такого участка
+
+            // один проход по массиву
+            for (int i = 1; i < n; i++)
+            {
+                if (array[i] >= array[i - 1])   // «не убывает»  (≧)
+                {
+                    if (!inRun)                // начало нового участка
+                    {
+                        count++;
+                        inRun = true;
+                    }
+                }
+                else
+                {
+                    inRun = false;             // возрастание (неубывание) прервалось
+                }
+            }
+
+            Console.WriteLine($"Количество монотонно возрастающих участков: {count}");
         }
 
         static void Array40()
@@ -863,7 +898,7 @@ namespace AbramyanAnswerBook
             }
             int closestIndex = 0;
 
-            for (int i = 0; i < array.Length; i++)
+            for (int i = 1; i < array.Length; i++)
             {
                 if (Math.Abs(array[i] - r) < Math.Abs(array[closestIndex] - r))
                     closestIndex = i;
@@ -871,6 +906,38 @@ namespace AbramyanAnswerBook
 
             Console.WriteLine($"Result: {array[closestIndex]}");
         }
+
+        static void Array41()
+        {
+            // Array 41. Дан массив размера N.
+            // Найти два соседних элемента, сумма которых максимальна,
+            // и вывести эти элементы в порядке возрастания их индексов.
+
+            Console.Write("Enter N (>= 2): ");
+            int n = int.Parse(Console.ReadLine()!);
+            int[] array = RandomFillArray(n, 20);
+            ShowArray(array);
+
+            int bestIndex = 0;
+            int maxSum = array[0] + array[1];
+
+            for (int i = 1; i < array.Length - 1; i++) 
+            {
+                int sum = array[i] + array[i + 1];
+             
+                if (sum > maxSum)
+                {
+                    maxSum = sum;
+                    bestIndex = i;
+                }
+            }
+
+            int first = array[bestIndex];
+            int second = array[bestIndex + 1];
+
+            Console.WriteLine($"Max sum is: {first} + {second} = {maxSum}");
+        }
+
         
         static void Array42()
         {
@@ -982,7 +1049,33 @@ namespace AbramyanAnswerBook
 
             ShowArray(array);
         }
-
+        
+        static void Array90()
+        {
+            // Array90. Дан массив размера N и целое число K (1 ≤ K ≤ N). Удалить из
+            // массива элемент с порядковым номером K.
+            Console.Write("Enter N: ");
+            int n = int.Parse(Console.ReadLine()!);
+            Console.Write("Enter K: ");
+            int k = int.Parse(Console.ReadLine()!);
+            int[] array = new int[n];
+            int[] newArray = new int[n - 1];
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write($"[{i}] = ");
+                array[i] = int.Parse(Console.ReadLine()!);
+            }
+            Console.WriteLine("---------------------------");
+            for (int i = 0; i <= k; i++)
+                newArray[i] = array[i];
+        
+            for (int i = k + 1; i < array.Length; i++)
+                newArray[i - 1] = array[i];
+        
+            array = newArray;
+        
+            ShowArray(array);
+        }
         
         public static void Main()
         {
