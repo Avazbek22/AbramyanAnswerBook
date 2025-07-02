@@ -937,11 +937,10 @@ namespace AbramyanAnswerBook
 
             Console.WriteLine($"Max sum is: {first} + {second} = {maxSum}");
         }
-
         
         static void Array42()
         {
-            // Array42. Дано число R и массив размера N. Найти два соседних элемента массива,
+            // Array 42. Дано число R и массив размера N. Найти два соседних элемента массива,
             // сумма которых наиболее близка к числу R, и вывести эти элементы
             // в порядке возрастания их индексов (определение наиболее близких чисел дано в задании Array40).
             Console.Write("Enter N: ");
@@ -957,11 +956,10 @@ namespace AbramyanAnswerBook
             Console.WriteLine("---------------------------");
             int firstValue = 0;
             int secondValue = 0;
-            int sum = 0;
             int closestSum = int.MaxValue;
             for (int i = 0; i < array.Length - 1; i++)
             {
-                sum = array[i] + array[i + 1];
+                int sum = array[i] + array[i + 1];
                 if (Math.Abs(sum - r) < Math.Abs(closestSum - r))
                 {
                     closestSum = sum;
@@ -969,8 +967,257 @@ namespace AbramyanAnswerBook
                     secondValue = array[i + 1];
                 }
             }
-            Console.WriteLine(firstValue);
-            Console.WriteLine(secondValue);
+            Console.WriteLine($"First value is: {firstValue}");
+            Console.WriteLine($"Second value is: {secondValue}");
+        }
+
+        static void Array43()
+        {
+            // Array 43. Дан целочисленный массив размера N, элементы которого
+            // упорядочены (по возрастанию или по убыванию).
+            // Найти количество различных элементов.
+
+            Console.Write("Enter N: ");
+            int n = int.Parse(Console.ReadLine()!);
+            int[] array = new int[n];
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write($"[{i}] = ");
+                array[i] = int.Parse(Console.ReadLine()!);
+            }
+
+            Console.WriteLine("---------------------------");
+
+            int distinctCount = 1;           
+            for (int i = 1; i < array.Length; i++)      
+                if (array[i] != array[i - 1])
+                    distinctCount++;
+
+            Console.WriteLine($"Different items count: {distinctCount}");
+        }
+
+        static void Array44()
+        {
+            // Array 44. Дан целочисленный массив размера N, содержащий ровно два одинаковых элемента.
+            // Найти номера одинаковых элементов и вывести эти номера в порядке возрастания.
+
+            Console.Write("Enter N (≥ 2): ");
+            int n = int.Parse(Console.ReadLine()!);
+            int[] array = new int[n];
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write($"[{i}] = ");
+                array[i] = int.Parse(Console.ReadLine()!);
+            }
+
+            int index1 = -1, index2 = -1;
+
+            for (int i = 0; i < array.Length - 1 && index1 == -1; i++)
+            {
+                for (int j = i + 1; j < array.Length; j++)
+                {
+                    if (array[i] == array[j])
+                    {
+                        index1 = i;
+                        index2 = j;
+                        break;
+                    }
+                }
+            }
+
+            if (index1 != -1) 
+                Console.WriteLine($"Same items is: A[{index1}] и A[{index2}]");
+            else
+                Console.WriteLine("Error: duplicates not found.");
+        }
+        
+        static void Array45()
+        {
+            // Array 45. Дан массив размера N. Найти номера двух ближайших элементов из этого массива
+            // (то есть элементов с наименьшим модулем разности) и вывести эти номера в порядке возрастания.
+            Console.Write("Enter N (≥ 2): ");
+            int n = int.Parse(Console.ReadLine()!);
+
+            int[] array = new int[n];
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write($"[{i}] = ");
+                array[i] = int.Parse(Console.ReadLine()!);
+            }
+
+            int bestI = 0, bestJ = 1;
+            int bestDiff = Math.Abs(array[0] - array[1]);
+
+            for (int i = 0; i < array.Length - 1; i++)
+            {
+                for (int j = i + 1; j < array.Length; j++)
+                {
+                    int diff = Math.Abs(array[i] - array[j]);
+                    if (diff < bestDiff)
+                    {
+                        bestDiff = diff;
+                        bestI = i;
+                        bestJ = j;
+                    }
+                }
+            }
+
+            Console.WriteLine($"Closest pair is: A[{bestI}] = {array[bestI]}, A[{bestJ}] = {array[bestJ]}, |Δ| = {bestDiff}");
+        }
+        
+        static void Array46()
+        {
+            // Array 46. Дано число R и массив размера N. Найти два различных элемента массива, сумма которых наиболее близка к числу R,
+            // и вывести эти элементы в порядке возрастания их индексов (определение наиболее близких чисел дано в задании Array40).
+            Console.Write("Enter N (≥ 2): ");
+            int n = int.Parse(Console.ReadLine()!);
+            Console.Write("Enter R: ");
+            int r = int.Parse(Console.ReadLine()!);
+            int[] array = new int[n];
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write($"[{i}] = ");
+                array[i] = int.Parse(Console.ReadLine()!);
+            }
+
+            int bestI = 0, bestJ = 1;
+            int bestDiff = Math.Abs(array[0] + array[1] - r);
+
+            for (int i = 0; i < array.Length - 1; i++)
+            {
+                for (int j = i + 1; j < array.Length; j++)
+                {
+                    int diff = Math.Abs(array[i] + array[j] - r);
+                    if (diff < bestDiff)
+                    {
+                        bestDiff = diff;
+                        bestI = i;
+                        bestJ = j;
+                    }
+                }
+            }
+
+            Console.WriteLine($"Сумма пары A[{bestI}] = {array[bestI]} и A[{bestJ}] = {array[bestJ]} наиболее близка к {{r}} (|Δ| = {{bestDiff}})");
+        }
+        
+        static void Array47()
+        {
+            // Array 47. Дан целочисленный массив размера N. Найти количество различных элементов в данном массиве.
+            Console.Write("Enter N: ");
+            int n = int.Parse(Console.ReadLine()!);
+            int[] array = new int[n];
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write($"array[{i}] = ");
+                array[i] = int.Parse(Console.ReadLine()!);
+            }
+
+            int distinctCount = 0;
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                bool alreadySeen = false;
+                for (int j = 0; j < i; j++)
+                {
+                    if (array[i] == array[j])
+                    {
+                        alreadySeen = true;
+                        break;
+                    }
+                }
+                if (!alreadySeen)
+                {
+                    distinctCount++;
+                }
+            }
+
+            Console.WriteLine($"Distinct items count: {distinctCount}");
+        }
+        
+        static void Array48()
+        {
+            // Array 48. Дан целочисленный массив размера N. Найти максимальное количество его одинаковых элементов.
+            Console.Write("Enter N: ");
+            int n = int.Parse(Console.ReadLine()!);
+            int[] array = new int[n];
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write($"array[{i}] = ");
+                array[i] = int.Parse(Console.ReadLine()!);
+            }
+
+            int maxMultiplicity = 1;
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                int currentCount = 1;
+                for (int j = i + 1; j < array.Length; j++)
+                {
+                    if (array[i] == array[j])
+                    {
+                        currentCount++;
+                    }
+                }
+                if (currentCount > maxMultiplicity)
+                    maxMultiplicity = currentCount;
+            }
+
+            Console.WriteLine($"Maximum multiplicity: {maxMultiplicity}");
+        }
+        
+        static void Array49()
+        {
+            // Array 49. Дан целочисленный массив размера N. Если он является перестановкой, то есть содержит все числа от 1 до N, то вывести 0;
+            // в противном случае вывести номер первого недопустимого элемента.
+            Console.Write("Enter N: ");
+            int n = int.Parse(Console.ReadLine()!);
+            int[] array = new int[n];
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write($"array[{i}] = ");
+                array[i] = int.Parse(Console.ReadLine()!);
+            }
+
+            bool[] seen = new bool[array.Length + 1];
+            for (int i = 0; i < array.Length; i++)
+            {
+                int value = array[i];
+
+                if (value < 1 || value > array.Length || seen[value])
+                {
+                    Console.WriteLine($"First invalid element index: {i}");
+                    return;
+                }
+
+                seen[value] = true;
+            }
+
+            Console.WriteLine("0");  
+        }
+        
+        static void Array50()
+        {
+            // Array 50. Дан целочисленный массив A размера N, являющийся перестановкой.
+            // Найти количество инверсий в данной перестановке, то есть таких пар элементов AI и AJ,
+            // в которых большее число находится слева от меньшего: AI > AJ при I < J.
+
+            Console.Write("Enter N: ");
+            int n = int.Parse(Console.ReadLine()!);
+            int[] array = new int[n];
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write($"array[{i}] = ");
+                array[i] = int.Parse(Console.ReadLine()!);
+            }
+
+            int inversionCount = 0;
+
+            for (int i = 0; i < array.Length - 1; i++)
+                for (int j = i + 1; j < array.Length; j++)
+                    if (array[i] > array[j])
+                        inversionCount++;
+
+            Console.WriteLine($"Inversion count: {inversionCount}");
         }
         
         static void Array86()
