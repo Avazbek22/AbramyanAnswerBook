@@ -115,6 +115,7 @@ public class Strings
             Console.WriteLine(2);
         else
             Console.WriteLine(0);
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     }
 
     static void String20()
@@ -142,8 +143,11 @@ public class Strings
 
     static void String22()
     {
+        // String22. Дана строка, изображающая целое положительное число. Вывести сумму цифр этого числа.
+
         Console.Write("Enter a text: ");
-        Console.WriteLine($"Sum: {Console.ReadLine()!.Select(Convert.ToInt32).Sum()}");
+        // Console.WriteLine($"Sum: {Console.ReadLine()!.Select(n => int.Parse(n.ToString())).Sum()}"); // #1
+        Console.WriteLine($"Sum: {Console.ReadLine()!.Select(char.GetNumericValue).Sum()}"); // #2
     }
 
     static void String44()
@@ -211,7 +215,7 @@ public class Strings
     public static void Main()
     {
         // Изучить StringBuilder
-        String13();
+        String22();
     }
 
 }
