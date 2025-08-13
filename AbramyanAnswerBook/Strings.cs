@@ -1,4 +1,5 @@
 using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace AbramyanAnswerBook;
 
@@ -120,7 +121,7 @@ public class Strings
 
     static void String20()
     {
-        //String20.Дано целое положительное число. Вывести символы, изображающие цифры этого числа(в порядке слева направо).
+        //String20. Дано целое положительное число. Вывести символы, изображающие цифры этого числа(в порядке слева направо).
         Console.Write("Enter any number: ");
         string number = Console.ReadLine()!;
         for (int i = 0; i < number.Length; i++)
@@ -131,7 +132,7 @@ public class Strings
 
     static void String21()
     {
-        //String21.Дано целое положительное число. Вывести символы, изображающие цифры этого числа(в порядке справа налево).
+        //String21. Дано целое положительное число. Вывести символы, изображающие цифры этого числа(в порядке справа налево).
         Console.Write("Enter any number: ");
         int number = int.Parse(Console.ReadLine());
         string numberText = number.ToString();
@@ -148,6 +149,35 @@ public class Strings
         Console.Write("Enter a text: ");
         // Console.WriteLine($"Sum: {Console.ReadLine()!.Select(n => int.Parse(n.ToString())).Sum()}"); // #1
         Console.WriteLine($"Sum: {Console.ReadLine()!.Select(char.GetNumericValue).Sum()}"); // #2
+    }
+    
+    static void String32_Regex()
+    {
+        // String32. Даны строки S и S0. Найти количество вхождений строки S0 в строку S.
+
+        Console.Write("Enter S: ");
+        string s = Console.ReadLine() ?? string.Empty;
+
+        Console.Write("Enter S0: ");
+        string s0 = Console.ReadLine() ?? string.Empty;
+
+        if (s0.Length == 0)
+        {
+            Console.WriteLine("Occurrences (overlapping): 0");
+            Console.WriteLine("Occurrences (non-overlapping): 0");
+            return;
+        }
+
+        // непересекающиеся: обычные совпадения
+        string patternNonOverlapping = Regex.Escape(s0);
+        int countNonOverlapping = Regex.Matches(s, patternNonOverlapping).Count;
+
+        // пересекающиеся: позитивный просмотр вперёд
+        string patternOverlapping = $"(?={Regex.Escape(s0)})";
+        int countOverlapping = Regex.Matches(s, patternOverlapping).Count;
+
+        Console.WriteLine($"Occurrences (overlapping): {countOverlapping}");
+        Console.WriteLine($"Occurrences (non-overlapping): {countNonOverlapping}");
     }
 
     static void String44()
