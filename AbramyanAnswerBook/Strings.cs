@@ -179,6 +179,22 @@ public class Strings
         Console.WriteLine($"Occurrences (overlapping): {countOverlapping}");
         Console.WriteLine($"Occurrences (non-overlapping): {countNonOverlapping}");
     }
+    
+    static void String40()
+    {
+        //String40.Дана строка, содержащая по крайней мере один символ пробела.
+        //Вывести подстроку, расположенную между первым и последним пробелом
+        //исходной строки. Если строка содержит только один пробел, то вывести пустую строку
+        Console.Write("Enter string: ");
+        string str = Console.ReadLine()!;
+        var lines = str.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        
+        if (lines.Length < 2)
+            Console.WriteLine(string.Empty);
+        else
+            for (int i = 1; i < lines.Length - 1; i++)
+                Console.Write(lines[i] + " ");
+    }
 
     static void String44()
     {
@@ -245,7 +261,7 @@ public class Strings
     public static void Main()
     {
         // Изучить StringBuilder
-        String22();
+        String40();
     }
 
 }
