@@ -195,6 +195,36 @@ public class Strings
             for (int i = 1; i < lines.Length - 1; i++)
                 Console.Write(lines[i] + " ");
     }
+    
+    static void String42()
+    {
+        //String42. Дана строка, состоящая из русских слов, набранных заглавными буквами и разделенных пробелами(одним или несколькими).
+        //Найти количество слов, которые начинаются и заканчиваются одной и той же буквой
+        Console.Write("Enter original string: ");
+        string originalString = Console.ReadLine()!;
+        var lines = originalString.Split(' ',StringSplitOptions.RemoveEmptyEntries);
+        int counter = 0;
+        foreach (string line in lines)
+        {
+            if (string.Compare(line.First().ToString(), line.Last().ToString(), StringComparison.OrdinalIgnoreCase) is 0) 
+                counter++;
+        }
+        Console.WriteLine(counter);       
+    }
+    
+    static int String42_Linq(string s)
+    {
+        if (string.IsNullOrWhiteSpace(s)) return 0;
+
+        // Разбиваем по пробелу, удаляя пустые сегменты (несколько пробелов подряд).
+        var words = s.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+        return words.Count(w =>
+            char.ToUpperInvariant(w[0]) == char.ToUpperInvariant(w[^1]));
+    }
+    
+
+
 
     static void String44()
     {
@@ -261,7 +291,7 @@ public class Strings
     public static void Main()
     {
         // Изучить StringBuilder
-        String40();
+        String42();
     }
 
 }
