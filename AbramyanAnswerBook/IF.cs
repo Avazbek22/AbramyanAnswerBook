@@ -210,14 +210,14 @@
 // int b = int.Parse(Console.ReadLine()!);
 // Console.Write("Enter C: ");
 // int c = int.Parse(Console.ReadLine()!);
-// if (a < b && a < c)
+// if (a < b && a < c) // Сначала ищем наименьшее
 //     Console.WriteLine(a);
 // else if (b < a && b < c)
 //     Console.WriteLine(b);
 // else if (c < a && c < b)
 //     Console.WriteLine(c);
 //
-// if (a > b && a > c)
+// if (a > b && a > c) // Потом ищем набольшее
 //     Console.WriteLine(a);
 // else if (b > a && b > c)
 //     Console.WriteLine(b);

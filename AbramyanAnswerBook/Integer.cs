@@ -140,5 +140,5 @@
 // Определить соответствующий ему номер столетия, учитывая, что, к примеру, началом 20 столетия был 1901 год.
 // Console.Write("Enter year: ");
 // int year = int.Parse(Console.ReadLine()!);
-//Console.WriteLine((year - 1) / 100 + 1); // Variant #1
-//Console.WriteLine((year + 99) / 100); // Variant #2
+// Console.WriteLine((year - 1) / 100 + 1); // Variant #1
+// Console.WriteLine((year + 99) / 100); // Variant #2
