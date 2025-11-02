@@ -5,7 +5,6 @@
 
 // Begin: 1-12, 16, 20, 22-24, 31-34
 
-
 // Begin 1. Дана сторона квадрата a. Найти его периметр P = 4·a.
 // Console.Write("Enter A: ");
 // int a = int.Parse(Console.ReadLine()!);
@@ -183,8 +182,9 @@
 // int a = int.Parse(Console.ReadLine()!);
 // Console.Write("Enter Y: ");
 // int y = int.Parse(Console.ReadLine()!);
-// Console.WriteLine($"Price for 1 kg: {a / x}");
-// Console.WriteLine($"Price for {y} kg: {(a / x) * y}");
+// int priceForOneKg = a / x;
+// Console.WriteLine($"Price for 1 kg: {priceForOneKg}");
+// Console.WriteLine($"Price for {y} kg: {priceForOneKg * y}");
 
 // Begin 34. Известно, что X кг шоколадных конфет стоит A рублей, а Y кг ирисок стоит B рублей.
 // Определить, сколько стоит 1 кг шоколадных конфет, 1 кг ирисок, а также во сколько раз шоколадные конфеты дороже ирисок.

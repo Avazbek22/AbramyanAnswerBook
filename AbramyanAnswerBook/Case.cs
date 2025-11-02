@@ -121,10 +121,11 @@
 // например: 18 — «восемнадцать учебных заданий»,
 // Console.Write("Введите номер задания: ");
 // int n = int.Parse(Console.ReadLine()!);
-// if (n > 10 && n < 20) 
+// if (n > 9 && n < 20) 
 // {
 //     switch (n)
 //     {
+//         case 10: Console.Write("Десять "); break;
 //         case 11: Console.Write("Одиннадцать  "); break;
 //         case 12: Console.Write("Двенадцать "); break;
 //         case 13: Console.Write("Тринадцать "); break;
@@ -164,8 +165,6 @@
 //
 //     Console.WriteLine(" учебных заданий");
 // }
-
-
 
 
 
