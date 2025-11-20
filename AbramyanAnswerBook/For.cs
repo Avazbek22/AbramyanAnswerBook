@@ -122,6 +122,7 @@
 // Console.WriteLine($"Sum = {sum}");
 
 // For 11. Дано целое число N (> 0). Найти сумму N^2 + (N + 1)^2 + (N + 2)^2 + . . . + (2·N)^2
+// Variant #1
 // Console.Write("Enter N: ");
 // int n = int.Parse(Console.ReadLine()!);
 // int sum = 0;
@@ -130,6 +131,17 @@
 //     sum += (n + i) * (n + i);
 // }
 // Console.WriteLine($"Sum = {sum}");
+
+//For 11. Дано целое число N (> 0). Найти сумму N^2 + (N + 1)^2 + (N + 2)^2 + ... + (2·N)^2 (целое число).
+// Console.Write("Enter N: ");
+// int n = int.Parse(Console.ReadLine()!);
+// int sum = 0;
+// for (int i = n; i < 2 * n; i++)
+// {
+//     sum += i * i;
+// }
+//
+// Console.WriteLine(sum);
 
 // For 12. Дано целое число N (> 0). Найти произведение 1.1 · 1.2 · 1.3 · . . .
 // Console.Write("Enter N: ");
@@ -177,7 +189,7 @@
 // Console.Write("Enter N: ");
 // int n = int.Parse(Console.ReadLine()!);
 // int sum = 0;
-// for (int i = 0, j = 1; i < n; i++, j+=2)
+// for (int i = 0, j = 1; i < n; i++, j += 2) 
 // {
 //     sum += j;
 // }
@@ -271,6 +283,7 @@
     
 // For 33. Дано целое число N (> 1). Последовательность чисел Фибоначчи FK (целого типа) определяется следующим образом:
 // F1 = 1, F2 = 1, FK = FK−2 + FK−1, K = 3, 4, . . . .
+// Variant #1
 // Console.Write("Enter N: ");
 // int n = int.Parse(Console.ReadLine()!);
 // int f1 = 0, f2 = 1, fk = 0;
@@ -281,6 +294,21 @@
 //     f1 = f2;
 //     f2 = fk;
 //     Console.Write(fk + " ");
+// }
+
+// For 33. Дано целое число N (> 1). Последовательность чисел Фибоначчи FK (целого типа) определяется следующим образом:
+// F1 = 1, F2 = 1, FK = FK−2 + FK−1, K = 3, 4, . . . .
+// Variant #2
+// Console.Write("Enter N: ");
+// int n = int.Parse(Console.ReadLine()!);
+// int f1 = 0, f2 = 1, fk = 1;
+// Console.WriteLine($"[1] = {f1}\n[2] = {f2}\n[3] = {fk}");
+// for (int i = 3; i <= n; i++)
+// {
+//     f1 = f2;
+//     f2 = fk;
+//     fk = f1 + f2;
+//     Console.WriteLine($"[{i}] = {fk}");
 // }
 
 // For 36. Даны целые положительные числа N и K. Найти сумму 1^K + 2^K + . . . + N^K.
@@ -355,7 +383,7 @@
 // int b = int.Parse(Console.ReadLine()!);
 // for (int i = a; i <= b; i++)
 // {
-//     for (int j = 0; j <= i - a; j++) 
+//     for (int j = 0; j <= i - a; j++) // or for (int j = a; j <= i; j++)
 //     {
 //         Console.Write(i + " ");
 //     }

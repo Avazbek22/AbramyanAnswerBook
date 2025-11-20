@@ -130,7 +130,7 @@
 // int b = int.Parse(Console.ReadLine()!);
 // Console.Write("Enter C: ");
 // int c = int.Parse(Console.ReadLine()!);
-// bool onlyOneIsPositive =  (a > 0 && b <= 0 && c <= 0) || (b > 0 && a <= 0 && c <= 0) || (c > 0 && a <= 0 && b <= 0);
+// bool onlyOneIsPositive = (a > 0 && b <= 0 && c <= 0) || (b > 0 && a <= 0 && c <= 0) || (c > 0 && a <= 0 && b <= 0);
 // Console.WriteLine(onlyOneIsPositive);
 
 // Boolean 15. Даны три целых числа: A, B, C. Проверить истинность высказывания: «Ровно два из чисел A, B, C являются положительными».

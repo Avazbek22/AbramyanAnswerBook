@@ -204,6 +204,7 @@
 //     Console.WriteLine(c);
 
 // If 14. Даны три числа. Вывести вначале наименьшее, а затем наибольшее из данных чисел.
+// Variant #1
 // Console.Write("Enter A: ");
 // int a = int.Parse(Console.ReadLine()!);
 // Console.Write("Enter B: ");
@@ -223,6 +224,29 @@
 //     Console.WriteLine(b);
 // else if (c > a && c > b)
 //     Console.WriteLine(c);
+
+
+// If 14. Даны три числа. Вывести вначале наименьшее, а затем наибольшее из данных чисел.
+// Variant #2
+// Console.Write("Введите число 1: ");
+// int n1 = int.Parse(Console.ReadLine()!);
+// Console.Write("Введите число 2: ");
+// int n2 = int.Parse(Console.ReadLine()!);
+// Console.Write("Введите число 3: ");
+// int n3 = int.Parse(Console.ReadLine()!);
+// int min = n1;
+// if (n2 < min) 
+//     min = n2;
+// if (n3 < min)
+//     min = n3;
+//
+// int max = n1;
+// if (n2 > max) 
+//     max = n2;
+// if (n3 > max) 
+//     max = n3;
+//
+// Console.WriteLine($"{min}, {max}");
 
 // If 15. Даны три числа. Найти сумму двух наибольших из них
 // Console.Write("Enter A: ");
