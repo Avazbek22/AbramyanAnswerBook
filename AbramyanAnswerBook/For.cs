@@ -144,6 +144,7 @@
 // Console.WriteLine(sum);
 
 // For 12. Дано целое число N (> 0). Найти произведение 1.1 · 1.2 · 1.3 · . . .
+// Variants #1
 // Console.Write("Enter N: ");
 // int n = int.Parse(Console.ReadLine()!);
 // decimal product = 1.1m, j = 1.2m;
@@ -153,6 +154,17 @@
 //     Console.WriteLine(product);
 // }
 // Console.WriteLine($"Product = {product}");
+
+// For 12. Дано целое число N (> 0). Найти произведение 1.1 · 1.2 · 1.3 · . . . (N сомножителей).
+// Variant #2 (by Lina Savchuk)
+// Console.Write("N: ");
+// int n = int.Parse(Console.ReadLine()!);
+// double product = 1.0;
+// for (int i = 1; i <= n; i++)
+// {
+//      product *= 1.0 + i / 10.0;
+// }
+// Console.WriteLine(product);
 
 // For 13◦. Дано целое число N (> 0). Найти значение выражения 1.1 − 1.2 + 1.3 − . . .
 // (N слагаемых, знаки чередуются). Условный оператор не использовать.
