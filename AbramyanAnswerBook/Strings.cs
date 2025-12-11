@@ -37,6 +37,17 @@ public class Strings
         Console.WriteLine();
     }
 
+    static void String10()
+    {
+        Console.Write("Enter text: ");
+        string text = Console.ReadLine()!;
+
+        //string reversed = new string();
+        //Console.WriteLine("Обратная строка: " + reversed);
+        
+        Console.WriteLine($"Обратная строка: {text.Reverse().ToArray()}");
+    }
+
     static void String11()
     {
         Console.Write("Enter text: ");
@@ -70,16 +81,15 @@ public class Strings
 
     static void String16()
     {
-        //String 16. Дана строка. Преобразовать в ней все прописные латинские буквы в строчные
         Console.Write("Enter any text: ");
         string text = Console.ReadLine()!;
-        
-        // string result = Regex.Replace(text, "[^A-Z]", "").ToLower();
-        // string result = new string(text.Where(c => Regex.IsMatch(c.ToString(), "[A-Z]")).Select(char.ToLower).ToArray());
-        
-        string result = new string(text.Where(c => c >= 'A' && c <= 'Z').Select(char.ToLower).ToArray());
+    
+        string result = new string(text.Select(c => (c >= 'A' && c <= 'Z') ? char.ToLower(c) : c).ToArray());
+        // string result = Regex.Replace(text, "[A-Z]", m => m.Value.ToLower()); // Regex variant
+    
         Console.WriteLine(result);
     }
+
 
     static void String17()
     {
@@ -134,7 +144,7 @@ public class Strings
     {
         //String21. Дано целое положительное число. Вывести символы, изображающие цифры этого числа(в порядке справа налево).
         Console.Write("Enter any number: ");
-        int number = int.Parse(Console.ReadLine());
+        int number = int.Parse(Console.ReadLine()!);
         string numberText = number.ToString();
         for (int i = numberText.Length - 1; i >= 0; i--)
         {
@@ -149,6 +159,16 @@ public class Strings
         Console.Write("Enter a text: ");
         // Console.WriteLine($"Sum: {Console.ReadLine()!.Select(n => int.Parse(n.ToString())).Sum()}"); // #1
         Console.WriteLine($"Sum: {Console.ReadLine()!.Select(char.GetNumericValue).Sum()}"); // #2
+    }
+
+    static void String27()
+    {
+        // String27. Даны целые положительные числа N1 и N2 и строки S1 и S2.
+        // Получить из этих строк новую строку, содержащую первые N1 символов
+        // строки S1 и последние N2 символов строки S2 (в указанном порядке).
+
+        
+        
     }
     
     static void String32_Regex()
@@ -178,6 +198,20 @@ public class Strings
 
         Console.WriteLine($"Occurrences (overlapping): {countOverlapping}");
         Console.WriteLine($"Occurrences (non-overlapping): {countNonOverlapping}");
+    }
+
+    static void String39()
+    {
+        // String39. Дана строка, содержащая по крайней мере один символ пробела.
+        // Вывести подстроку, расположенную между первым и вторым пробелом исходной строки.
+        // Если строка содержит только один пробел, то вывести пустую строку.
+        
+        Console.Write("Enter a text: ");
+        string str = Console.ReadLine()!;
+        if (str is " ")
+            Console.WriteLine(string.Empty);
+        else
+            Console.WriteLine(new string(str.Split(' ', StringSplitOptions.RemoveEmptyEntries)[1])); // #1
     }
     
     static void String40()
@@ -291,7 +325,8 @@ public class Strings
     public static void Main()
     {
         // Изучить StringBuilder
-        String42();
+        String39();
+        Console.ReadLine();
     }
 
 }
