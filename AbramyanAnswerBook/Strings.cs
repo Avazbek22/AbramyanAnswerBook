@@ -336,15 +336,16 @@ public class Strings
 
     static void String26_Linq()
     {
+        // String 26. Дано целое число N (> 0) и строка S. Преобразовать строку S в строку длины N следующим образом:
+        // если длина строки S больше N, то отбросить первые символы, если длина строки S меньше N,
+        // то в ее начало добавить символы «.» (точка).
+        
         Console.Write("Enter N: ");
         int n = int.Parse(Console.ReadLine()!);
-
         Console.Write("Enter S: ");
         string s = Console.ReadLine()!;
 
-        string result = s.Length > n
-            ? new string(s.Skip(s.Length - n).ToArray())
-            : new string(Enumerable.Repeat('.', n - s.Length).Concat(s).ToArray());
+        string result = (s.Length > n) ? string.Concat(s.TakeLast(n)) : new string('.', n - s.Length) + s;
 
         Console.WriteLine(result);
     }
@@ -367,6 +368,8 @@ public class Strings
         Console.WriteLine(string.Concat(s1.Take(n1)) + string.Concat(s2.TakeLast(n2))); // ✓
         // Console.WriteLine(new string(s1.Take(n1).ToArray()) + new string(s2.TakeLast(n2).ToArray())); // X 
         
+        //string result = s1[..Math.Min(n1, s1.Length)] + s2[^Math.Min(n2, s2.Length)..]; // Range op variant
+        //string result2 = s1.Substring(0, Math.Min(n1, s1.Length)) + s2.Substring(Math.Max(0, s2.Length - n2)); // Simple Substring
     }
 
     static void String32_Regex()
@@ -552,7 +555,7 @@ public class Strings
     public static void Main()
     {
         // Изучить StringBuilder
-        String27();
+        String26_Linq();
         Console.ReadLine();
         
         // if (double.TryParse(Console.ReadLine(), new CultureInfo("en-US"), out _))
