@@ -1,5 +1,8 @@
 // // Путь к сеньору: https://www.youtube.com/watch?v=1TvjgRJ34v8&list=PL5lgqZ5vlRRYAgjoNF240pV86qP0JOEEg&index=14&ab_channel=%D0%9F%D1%83%D1%82%D1%8C%D0%BASenior-%D1%83
 //
+// using System;
+// using System.Linq;
+//
 // namespace AbramyanAnswerBook
 // {
 //     public class Arrays
@@ -23,7 +26,7 @@
 //                 for (int i = 0; i < array.Length; i++)
 //                     Console.WriteLine($"[{i}] = {array[i]}");
 //             }
-//             
+//
 //             Console.WriteLine();
 //         }
 //
@@ -36,7 +39,7 @@
 //             }
 //             return array;
 //         }
-//         
+//
 //         static int[] RandomFillArray(int length, int maxValue)
 //         {
 //             int[] array = new int[length];
@@ -46,7 +49,7 @@
 //             }
 //             return array;
 //         }
-//         
+//
 //         static double[] RandomFillArray(int length)
 //         {
 //             double[] array = new double[length];
@@ -63,7 +66,7 @@
 //         {
 //             // Array 1. Дано целое число N (> 0). Сформировать и вывести целочисленный массив размера N,
 //             // содержащий N первых положительных нечетных чисел: 1, 3, 5,...
-//             
+//
 //             Console.Write("Enter N: ");
 //             int n = int.Parse(Console.ReadLine()!);
 //             int[] array = new int[n];
@@ -83,24 +86,22 @@
 //             int[] array = new int[n];
 //             for (int i = 0; i < array.Length; i++)
 //                 array[i] = 1 + i * 2;
-//             
+//
 //             ShowArray(array);
 //         }
 //
 //         static void Array2()
 //         {
 //             // Array 2. Дано целое число N (> 0). Сформировать и вывести целочисленный массив размера N,
-//             // содержащий степени двойки от первой до N-й: 2, 4, 8, 16 
-//             
-//             
-//             
+//             // содержащий степени двойки от первой до N-й: 2, 4, 8, 16
+//
 //             Console.Write("Enter N: ");
 //             int n = int.Parse(Console.ReadLine()!);
 //             int[] array = new int[n];
 //             array[0] = 2;
 //             for (int i = 1; i < array.Length; i++)
 //                 array[i] = array[i - 1] * 2;
-//             
+//
 //             ShowArray(array);
 //         }
 //
@@ -117,9 +118,9 @@
 //             int d = int.Parse(Console.ReadLine()!);
 //             for (int i = 0; i < array.Length; i++)
 //                 array[i] = a + i * d;
-//             
+//
 //             ShowArray(array);
-//             
+//
 //         }
 //
 //         static void Array4()
@@ -136,7 +137,7 @@
 //             array[0] = a;
 //             for (int i = 1; i < array.Length; i++)
 //                 array[i] = array[i - 1] * d;
-//             
+//
 //             ShowArray(array);
 //         }
 //
@@ -151,7 +152,7 @@
 //             array[1] = 1;
 //             for (int i = 2; i < array.Length; i++)
 //                 array[i] = array[i - 1] + array[i - 2];
-//             
+//
 //             ShowArray(array);
 //         }
 //
@@ -159,23 +160,7 @@
 //         {
 //             // Array 6. Даны целые числа N (> 2), A и B. Сформировать и вывести целочисленный массив размера N,
 //             // первый элемент которого равен A, второй равен B, а каждый последующий элемент равен сумме всех предыдущих.
-//             Console.Write("Enter N: ");
-//             int n = int.Parse(Console.ReadLine()!);
-//             Console.Write("Enter A: ");
-//             int a = int.Parse(Console.ReadLine()!);
-//             Console.Write("Enter B: ");
-//             int b = int.Parse(Console.ReadLine()!);
-//             int[] array = new int[n];
-//             array[0] = a;
-//             array[1] = b;
-//             for (int i = 2; i < array.Length; i++)
-//                 array[i] = array[i - 1] + array[i - 2];
-//             
-//             ShowArray(array);
-//         }
 //
-//         static void Array6_2()
-//         {
 //             // Author Semen Vaysman
 //             Console.Write("Enter N: ");
 //             int n = int.Parse(Console.ReadLine()!);
@@ -192,6 +177,7 @@
 //                 array[i] = sum;
 //                 sum += array[i];
 //             }
+//             ShowArray(array);
 //         }
 //
 //         static void Array7()
@@ -216,7 +202,7 @@
 //         {
 //             // Array 8. Дан целочисленный массив размера N.
 //             // Вывести все содержащиеся в данном массиве нечетные числа в порядке возрастания их индексов, а также их количество K.
-//             
+//
 //             Console.Write("Enter N: ");
 //             int n = int.Parse(Console.ReadLine()!);
 //             int[] array = GenerateNaturalArray(n);
@@ -224,7 +210,7 @@
 //
 //             Console.WriteLine("Odd numbers:");
 //             int oddsCount = 0;
-//             
+//
 //             for (int i = 0; i < array.Length; i++)
 //             {
 //                 if (array[i] % 2 != 0)
@@ -233,10 +219,10 @@
 //                     oddsCount++;
 //                 }
 //             }
-//             
+//
 //             Console.WriteLine($"Odd numbers count: {oddsCount}");
 //         }
-//         
+//
 //         static void Array9()
 //         {
 //             // Array 9. Дан целочисленный массив размера N.
@@ -250,7 +236,7 @@
 //
 //             Console.WriteLine("Even numbers:");
 //             int evensCount = 0;
-//             
+//
 //             for (int i = array.Length - 1; i >= 0; i--)
 //             {
 //                 if (array[i] % 2 == 0)
@@ -271,14 +257,14 @@
 //             int n = int.Parse(Console.ReadLine()!);
 //             int[] array = GenerateNaturalArray(n);
 //             ShowArray(array);
-//             
+//
 //             Console.WriteLine("Even numbers:");
 //             for (int i = 0; i < array.Length; i++)
 //             {
 //                 if (array[i] % 2 == 0)
 //                     Console.WriteLine($"[{i}] = {array[i]}");
 //             }
-//             
+//
 //             Console.WriteLine("Odd numbers:");
 //             for (int i = array.Length - 1; i >= 0; i--)
 //             {
@@ -292,7 +278,7 @@
 //             // Array 11. Дан массив A размера N и целое число K (1 ≤ K ≤ N).
 //             // Вывести элементы массива с порядковыми номерами, кратными K: AK, A2·K, A3·K, . .
 //             // Условный оператор не использовать.
-//             
+//
 //             Console.Write("Enter N: ");
 //             int n = int.Parse(Console.ReadLine()!);
 //             Console.Write("Enter K: ");
@@ -309,12 +295,12 @@
 //             // Array 12. Дан массив A размера N (N — четное число).
 //             // Вывести его элементы с четными номерами в порядке возрастания номеров: A2, A4, A6, . . ., AN .
 //             // Условный оператор не использовать.
-//             
+//
 //             Console.Write("Enter N: ");
 //             int n = int.Parse(Console.ReadLine()!);
 //             int[] array = GenerateNaturalArray(n);
 //             ShowArray(array);
-//             
+//
 //             for (int i = 2; i < array.Length; i += 2)
 //                 Console.WriteLine($"[{i}] = {array[i]}");
 //         }
@@ -324,13 +310,13 @@
 //             // Array 13. Дан массив A размера N (N — нечетное число).
 //             // Вывести его элементы с нечетными номерами в порядке убывания номеров: AN , AN−2, AN−4, . . .,A1.
 //             // Условный оператор не использовать.
-//             
+//
 //             Console.Write("Enter N: ");
 //             int n = int.Parse(Console.ReadLine()!);
 //             int[] array = GenerateNaturalArray(n);
 //             ShowArray(array);
-//             
-//             for (int i = array.Length - 1; i >= 2; i -= 2)
+//
+//             for (int i = array.Length - 2; i > 0; i -= 2)
 //                 Console.WriteLine($"[{i}] = {array[i]}");
 //         }
 //
@@ -344,14 +330,14 @@
 //             int n = int.Parse(Console.ReadLine()!);
 //             int[] array = GenerateNaturalArray(n);
 //             ShowArray(array);
-//             
+//
 //             Console.WriteLine("Even indexes:");
-//             
+//
 //             for (int i = 2; i < array.Length; i += 2)
 //                 Console.WriteLine($"[{i}] = {array[i]}");
 //
 //             Console.WriteLine("Odd indexes:");
-//             
+//
 //             for (int i = 1; i < array.Length; i += 2)
 //                 Console.WriteLine($"[{i}] = {array[i]}");
 //         }
@@ -360,21 +346,21 @@
 //         {
 //             // Array 15. Дан массив A размера N. Вывести вначале его элементы с нечетными номерами в порядке возрастания номеров,
 //             // а затем — элементы с четными номерами в порядке убывания номеров: A1, A3, A5, . . ., A6, A4, A2. Условный оператор не использовать.
-//             
+//
 //             Console.Write("Enter N: ");
 //             int n = int.Parse(Console.ReadLine()!);
 //             int[] array = GenerateNaturalArray(n);
 //             ShowArray(array);
-//             
+//
 //             Console.WriteLine("Odd indexes:");
-//             
+//
 //             for (int i = 1; i < array.Length; i += 2)
 //                 Console.WriteLine($"[{i}] = {array[i]}");
-//             
+//
 //             Console.WriteLine("Even indexes:");
-//             
+//
 //             int start = (array.Length - 1) % 2 == 0 ? array.Length - 1 : array.Length - 2;
-//             
+//
 //             for (int i = start; i >= 0; i -= 2)
 //                 Console.WriteLine($"[{i}] = {array[i]}");
 //         }
@@ -382,7 +368,7 @@
 //         static void Array16()
 //         {
 //             // Array 16. Дан массив A размера N. Вывести его элементы в следующем порядке: A1, AN , A2, AN−1, A3, AN−2, . . . .
-//             
+//
 //             Console.Write("Enter N: ");
 //             int n = int.Parse(Console.ReadLine()!);
 //             int[] array = GenerateNaturalArray(n);
@@ -401,17 +387,17 @@
 //             int middleIndex = half * 2 == n ? -1 : half;
 //             Console.WriteLine($"{(middleIndex + 1 > 0 ? $"[{middleIndex}] = {array[middleIndex]}" : "")}");
 //         }
-//         
+//
 //         static void Array17()
 //         {
 //             // Array 17. Дан массив A размера N. Вывести его элементы в следующем порядке:
 //             // A1, A2, AN , AN−1, A3, A4, AN−2, AN−3, . . . .
-//             
+//
 //             Console.Write("Enter N: ");
 //             int n = int.Parse(Console.ReadLine()!);
 //             int[] array = GenerateNaturalArray(n);
 //             ShowArray(array);
-//             
+//
 //             int left = 0, right = n - 1;
 //             for (int k = 0; k < array.Length; k++)
 //             {
@@ -426,7 +412,7 @@
 //         {
 //             // Array 17. Дан массив A размера N. Вывести его элементы в следующем порядке:
 //             // A1, A2, AN , AN−1, A3, A4, AN−2, AN−3, . . . .
-//             
+//
 //             Console.Write("Enter N: ");
 //             int n = int.Parse(Console.ReadLine()!);
 //             int[] array = GenerateNaturalArray(n);
@@ -472,7 +458,7 @@
 //             // Array 19. Дан целочисленный массив A размера 10.
 //             // Вывести порядковый номер последнего из тех его элементов AK, которые удовлетворяют двойному неравенству A1 < AK < A10.
 //             // Если таких элементов нет, то вывести 0.
-//             
+//
 //             int[] array = RandomFillArray(10, -10,11);
 //             ShowArray(array);
 //
@@ -498,7 +484,7 @@
 //             int k = int.Parse(Console.ReadLine()!);
 //             Console.Write("Enter L: ");
 //             int l = int.Parse(Console.ReadLine()!);
-//             
+//
 //             int[] array = GenerateNaturalArray(n);
 //             ShowArray(array);
 //
@@ -513,14 +499,14 @@
 //         {
 //             // Array 21. Дан массив размера N и целые числа K и L (1 ≤ K ≤ L ≤ N).
 //             // Найти среднее арифметическое элементов массива с номерами от K до L включительно.
-//             
+//
 //             Console.Write("Enter N: ");
 //             int n = int.Parse(Console.ReadLine()!);
 //             Console.Write("Enter K: ");
 //             int k = int.Parse(Console.ReadLine()!);
 //             Console.Write("Enter L: ");
 //             int l = int.Parse(Console.ReadLine()!);
-//             
+//
 //             int[] array = GenerateNaturalArray(n);
 //             ShowArray(array);
 //
@@ -535,21 +521,21 @@
 //         {
 //             // Array 22. Дан массив размера N и целые числа K и L (1 < K ≤ L ≤ N).
 //             // Найти сумму всех элементов массива, кроме элементов с номерами от K до L включительно.
-//             
+//
 //             Console.Write("Enter N: ");
 //             int n = int.Parse(Console.ReadLine()!);
 //             Console.Write("Enter K: ");
 //             int k = int.Parse(Console.ReadLine()!);
 //             Console.Write("Enter L: ");
 //             int l = int.Parse(Console.ReadLine()!);
-//             
+//
 //             int[] array = GenerateNaturalArray(n);
 //             ShowArray(array);
 //
 //             int sum = 0;
 //             for(int i = 0; i < k; i++)
 //                 sum += array[i];
-//             
+//
 //             for(int i = l + 1; i < array.Length; i++)
 //                 sum += array[i];
 //
@@ -560,21 +546,21 @@
 //         {
 //             // Array 23. Дан массив размера N и целые числа K и L (1 < K ≤ L ≤ N).
 //             // Найти среднее арифметическое всех элементов массива, кроме элементов с номерами от K до L включительно.
-//             
+//
 //             Console.Write("Enter N: ");
 //             int n = int.Parse(Console.ReadLine()!);
 //             Console.Write("Enter K: ");
 //             int k = int.Parse(Console.ReadLine()!);
 //             Console.Write("Enter L: ");
 //             int l = int.Parse(Console.ReadLine()!);
-//             
+//
 //             int[] array = GenerateNaturalArray(n);
 //             ShowArray(array);
 //
 //             int sum = 0;
 //             for(int i = 0; i < k; i++)
 //                 sum += array[i];
-//             
+//
 //             for(int i = l + 1; i < array.Length; i++)
 //                 sum += array[i];
 //
@@ -591,8 +577,8 @@
 //             int n = int.Parse(Console.ReadLine()!);
 //             int[] array = RandomFillArray(n, 11);
 //             ShowArray(array);
-//             
-//             int diff = array[1] - array[0]; 
+//
+//             int diff = array[1] - array[0];
 //             bool isProgression = true;
 //
 //             for (int i = 2; i < array.Length; i++)
@@ -612,11 +598,11 @@
 //             // Array 25. Дан массив ненулевых целых чисел размера N.
 //             // Проверить, образуют ли его элементы геометрическую прогрессию.
 //             // Если образуют, то вывести знаменатель прогрессии, если нет — вывести 0.
-//             
+//
 //             Console.Write("Enter N: ");
 //             int n = int.Parse(Console.ReadLine()!);
 //             int[] array = RandomFillArray(n, 11);
-//             
+//
 //             int ratio = array[1] / array[0];
 //
 //             for (int i = 1; i < n; i++)
@@ -635,12 +621,12 @@
 //         {
 //             // Array 26. Дан целочисленный массив размера N. Проверить, чередуются ли в нем четные и нечетные числа.
 //             // Если чередуются, то вывести 0, если нет, то вывести порядковый номер первого элемента, нарушающего закономерность.
-//             
+//
 //             Console.Write("Enter N: ");
 //             int n = int.Parse(Console.ReadLine()!);
 //             int[] array = RandomFillArray(n, 11);
 //             ShowArray(array);
-//             
+//
 //             for (int i = 0; i < array.Length - 1; i++)
 //             {
 //                 if (array[i] % 2 == array[i + 1] % 2)
@@ -657,12 +643,12 @@
 //             // Array 27. Дан массив ненулевых целых чисел размера N.
 //             // Проверить, чередуются ли в нем положительные и отрицательные числа.
 //             // Если чередуются, то вывести 0, если нет, то вывести порядковый номер первого элемента, нарушающего закономерность
-//             
+//
 //             Console.Write("Enter N: ");
 //             int n = int.Parse(Console.ReadLine()!);
 //             int[] array = RandomFillArray(n, -10, 11);
 //             ShowArray(array);
-//             
+//
 //             for (int i = 0; i < array.Length - 1; i++)
 //             {
 //                 if (array[i] * array[i + 1] > 0)
@@ -674,7 +660,7 @@
 //
 //             Console.WriteLine("0");
 //         }
-//         
+//
 //         static void Array28()
 //         {
 //             // Array 28. Дан массив A размера N.
@@ -682,10 +668,10 @@
 //             Console.Write("Enter N: ");
 //             int n = int.Parse(Console.ReadLine()!);
 //             int[] array = RandomFillArray(n, 21);
-//             ShowArray(array); 
-//             
+//             ShowArray(array);
+//
 //             int minValue = array[0];
-//             for (int i = 2; i < array.Length; i += 2) 
+//             for (int i = 2; i < array.Length; i += 2)
 //             {
 //                 if (array[i] < minValue)
 //                     minValue = array[i];
@@ -697,14 +683,14 @@
 //         {
 //             // Array 29. Дан массив A размера N.
 //             // Найти максимальный элемент из его элементов с нечетными номерами: A1, A3, A5, . . . .
-//             
+//
 //             Console.Write("Enter N: ");
 //             int n = int.Parse(Console.ReadLine()!);
 //             int[] array = RandomFillArray(n, 21);
 //             ShowArray(array);
-//             
+//
 //             int maxValue = array[1];
-//             for (int i = 3; i < array.Length; i += 2) 
+//             for (int i = 3; i < array.Length; i += 2)
 //             {
 //                 if (array[i] > maxValue)
 //                     maxValue = array[i];
@@ -717,7 +703,7 @@
 //             // Array 30. Дан массив размера N. Найти номера тех элементов массива,
 //             // которые больше своего правого соседа, и количество таких элементов.
 //             // Найденные номера выводить в порядке их возрастания.
-//             
+//
 //             Console.Write("Enter N: ");
 //             int n = int.Parse(Console.ReadLine()!);
 //             int[] array = RandomFillArray(n, 21);
@@ -742,7 +728,7 @@
 //             // Array 31. Дан массив размера N. Найти номера тех элементов массива,
 //             // которые больше своего левого соседа, и количество таких элементов.
 //             // Найденные номера выводить в порядке их убывания.
-//             
+//
 //             Console.Write("Enter N: ");
 //             int n = int.Parse(Console.ReadLine()!);
 //             int[] array = RandomFillArray(n, 21);
@@ -785,12 +771,12 @@
 //         {
 //             // Array 33. Дан массив размера N. Найти номер его последнего локального максимума
 //             // (локальный максимум — это элемент, который больше любого из своих соседей).
-//             
+//
 //             Console.Write("Enter N: ");
 //             int n = int.Parse(Console.ReadLine()!);
 //             int[] array = RandomFillArray(n, 21);
 //             ShowArray(array);
-//             
+//
 //             for (int i = array.Length - 2; i > 0; i--)
 //             {
 //                 if (array[i] > array[i - 1] && array[i] > array[i + 1])
@@ -805,7 +791,7 @@
 //         {
 //             // Array34. Дан массив размера N. Найти максимальный из его локальных минимумов
 //             // (определение локального минимума дано в задании Array32).
-//             
+//
 //             Console.Write("Enter N: ");
 //             int n = int.Parse(Console.ReadLine()!);
 //             int[] array = RandomFillArray(n, 21);
@@ -825,12 +811,12 @@
 //         {
 //             // Array 35. Дан массив размера N. Найти минимальный из его локальных максимумов
 //             // (определение локального максимума дано в задании Array 33).
-//             
+//
 //             Console.Write("Enter N: ");
 //             int n = int.Parse(Console.ReadLine()!);
 //             int[] array = RandomFillArray(n, 21);
 //             ShowArray(array);
-//             
+//
 //             int minLocalMax = int.MaxValue;
 //             for (int i = 1; i < array.Length - 1; i++)
 //             {
@@ -851,7 +837,7 @@
 //             int n = int.Parse(Console.ReadLine()!);
 //             int[] array = RandomFillArray(n, 21);
 //             ShowArray(array);
-//             
+//
 //             int maxNotLocal = int.MinValue;
 //             for (int i = 1; i < array.Length - 1; i++)
 //             {
@@ -871,7 +857,7 @@
 //         static void Array37()
 //         {
 //             // Array 37. Дан массив размера N. Найти количество участков, на которых его элементы монотонно возрастают
-//             
+//
 //             Console.Write("Enter N: ");
 //             int n = int.Parse(Console.ReadLine()!);
 //             int[] array = new int[n];
@@ -891,9 +877,9 @@
 //             // один проход по массиву
 //             for (int i = 1; i < n; i++)
 //             {
-//                 if (array[i] >= array[i - 1])   // «не убывает»  (≧)
+//                 if (array[i] >= array[i - 1]) // «не убывает»  (≧)
 //                 {
-//                     if (!inRun)                // начало нового участка
+//                     if (!inRun) // начало нового участка
 //                     {
 //                         count++;
 //                         inRun = true;
@@ -901,7 +887,7 @@
 //                 }
 //                 else
 //                 {
-//                     inRun = false;             // возрастание (неубывание) прервалось
+//                     inRun = false; // возрастание (неубывание) прервалось
 //                 }
 //             }
 //
@@ -948,10 +934,10 @@
 //             int bestIndex = 0;
 //             int maxSum = array[0] + array[1];
 //
-//             for (int i = 1; i < array.Length - 1; i++) 
+//             for (int i = 1; i < array.Length - 1; i++)
 //             {
 //                 int sum = array[i] + array[i + 1];
-//              
+//
 //                 if (sum > maxSum)
 //                 {
 //                     maxSum = sum;
@@ -959,12 +945,9 @@
 //                 }
 //             }
 //
-//             int first = array[bestIndex];
-//             int second = array[bestIndex + 1];
-//
-//             Console.WriteLine($"Max sum is: {first} + {second} = {maxSum}");
+//             Console.WriteLine($"Max sum is: {array[bestIndex]} + {array[bestIndex + 1]} = {maxSum}");
 //         }
-//         
+//
 //         static void Array42()
 //         {
 //             // Array 42. Дано число R и массив размера N. Найти два соседних элемента массива,
@@ -1015,8 +998,8 @@
 //
 //             Console.WriteLine("---------------------------");
 //
-//             int distinctCount = 1;           
-//             for (int i = 1; i < array.Length; i++)      
+//             int distinctCount = 1;
+//             for (int i = 1; i < array.Length; i++)
 //                 if (array[i] != array[i - 1])
 //                     distinctCount++;
 //
@@ -1052,12 +1035,12 @@
 //                 }
 //             }
 //
-//             if (index1 != -1) 
+//             if (index1 != -1)
 //                 Console.WriteLine($"Same items is: A[{index1}] и A[{index2}]");
 //             else
 //                 Console.WriteLine("Error: duplicates not found.");
 //         }
-//         
+//
 //         static void Array45()
 //         {
 //             // Array 45. Дан массив размера N. Найти номера двух ближайших элементов из этого массива
@@ -1091,7 +1074,7 @@
 //
 //             Console.WriteLine($"Closest pair is: A[{bestI}] = {array[bestI]}, A[{bestJ}] = {array[bestJ]}, |Δ| = {bestDiff}");
 //         }
-//         
+//
 //         static void Array46()
 //         {
 //             // Array 46. Дано число R и массив размера N. Найти два различных элемента массива, сумма которых наиболее близка к числу R,
@@ -1126,7 +1109,7 @@
 //
 //             Console.WriteLine($"Сумма пары A[{bestI}] = {array[bestI]} и A[{bestJ}] = {array[bestJ]} наиболее близка к {{r}} (|Δ| = {{bestDiff}})");
 //         }
-//         
+//
 //         static void Array47()
 //         {
 //             // Array 47. Дан целочисленный массив размера N. Найти количество различных элементов в данном массиве.
@@ -1160,7 +1143,7 @@
 //
 //             Console.WriteLine($"Distinct items count: {distinctCount}");
 //         }
-//         
+//
 //         static void Array48()
 //         {
 //             // Array 48. Дан целочисленный массив размера N. Найти максимальное количество его одинаковых элементов.
@@ -1191,7 +1174,7 @@
 //
 //             Console.WriteLine($"Maximum multiplicity: {maxMultiplicity}");
 //         }
-//         
+//
 //         static void Array49()
 //         {
 //             // Array 49. Дан целочисленный массив размера N. Если он является перестановкой, то есть содержит все числа от 1 до N, то вывести 0;
@@ -1219,9 +1202,9 @@
 //                 seen[value] = true;
 //             }
 //
-//             Console.WriteLine("0");  
+//             Console.WriteLine("0");
 //         }
-//         
+//
 //         static void Array50()
 //         {
 //             // Array 50. Дан целочисленный массив A размера N, являющийся перестановкой.
@@ -1246,7 +1229,7 @@
 //
 //             Console.WriteLine($"Inversion count: {inversionCount}");
 //         }
-//         
+//
 //         static void Array86()
 //         {
 //             // Array86. Дан массив A размера N и целое число K (1 ≤ K ≤ 4, K < N).
@@ -1260,7 +1243,7 @@
 //             int k = int.Parse(Console.ReadLine()!);
 //             int[] array = GenerateNaturalArray(n);
 //             ShowArray(array);
-//             
+//
 //             int[] tempArray = new int[k];
 //             for (int i = 0, j = 0; i < k; i++)
 //                 tempArray[j++] = array[i];
@@ -1273,7 +1256,7 @@
 //
 //             ShowArray(array);
 //         }
-//         
+//
 //         static void Array89()
 //         {
 //             // Array89. Дан массив размера N, все элементы которого, кроме одного,
@@ -1307,7 +1290,7 @@
 //                 Console.WriteLine("Элемент, нарушающий убывание, не найден.");
 //                 return;
 //             }
-//             
+//
 //             if (wrongIndex < array.Length - 1 && array[wrongIndex] < array[wrongIndex + 1])
 //             {
 //                 // Сдвиг вправо
@@ -1323,7 +1306,7 @@
 //
 //             ShowArray(array);
 //         }
-//         
+//
 //         static void Array90()
 //         {
 //             // Array90. Дан массив размера N и целое число K (1 ≤ K ≤ N). Удалить из
@@ -1342,18 +1325,19 @@
 //             Console.WriteLine("---------------------------");
 //             for (int i = 0; i <= k; i++)
 //                 newArray[i] = array[i];
-//         
+//
 //             for (int i = k + 1; i < array.Length; i++)
 //                 newArray[i - 1] = array[i];
-//         
+//
 //             array = newArray;
-//         
+//
 //             ShowArray(array);
 //         }
-//         
+//
 //         public static void Main()
 //         {
-//             Array89();
+//             Array48();
+//             Console.ReadLine();
 //         }
 //     }
 // }
