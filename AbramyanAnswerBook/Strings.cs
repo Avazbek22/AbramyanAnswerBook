@@ -17,7 +17,7 @@ public class Strings
     static void String2()
     {
         // String 2. Дано целое число N (32 ≤ N ≤ 126). Вывести символ с кодом, равным N.
-        
+
         Console.Write("Enter N: ");
         int n = int.Parse(Console.ReadLine()!);
         Console.WriteLine((char)n);
@@ -27,7 +27,7 @@ public class Strings
     {
        // String 3. Дан символ C. Вывести два символа,
        // первый из которых предшествует символу C в кодовой таблице, а второй следует за символом C.
-       
+
        Console.Write("Enter C: ");
        char c = char.Parse(Console.ReadLine()!);
        Console.WriteLine($"Previous: {(char)(c - 1)}");
@@ -38,7 +38,7 @@ public class Strings
     {
         // String 4. Дано целое число N (1 ≤ N ≤ 26).
         // Вывести N первых прописных (то есть заглавных) букв латинского алфавита.
-        
+
         Console.Write("Enter N: ");
         int n = int.Parse(Console.ReadLine()!);
         for (int i = 0; i < n; i++)
@@ -72,11 +72,11 @@ public class Strings
         else if ((c >= 'а' && c <= 'я') || c == 'ё')
             Console.WriteLine("rus");
     }
-    
+
     static void String7()
     {
         // String 7. Дана непустая строка. Вывести коды ее первого и последнего символа.
-        
+
         Console.Write("Enter text: ");
         string str = Console.ReadLine()!;
         Console.WriteLine($"First code: {(int)str.First()}");
@@ -86,7 +86,7 @@ public class Strings
     static void String8()
     {
         // String 8. Дано целое число N (> 0) и символ C. Вывести строку длины N, которая состоит из символов C.
-        
+
         Console.Write("Enter N: ");
         int n = int.Parse(Console.ReadLine()!);
         Console.Write("Enter C: ");
@@ -107,13 +107,13 @@ public class Strings
         char c2 = char.Parse(Console.ReadLine()!);
         for (int i = 0; i < n / 2; i++)
             Console.Write($"{c1}{c2}");
-        
+
     }
 
     static void String10()
     {
         // String 10. Дана строка. Вывести строку, содержащую те же символы, но расположенные в обратном порядке.
-        
+
         Console.Write("Enter text: ");
         string text = Console.ReadLine()!;
         Console.WriteLine($"Обратная строка: {new string(text.Reverse().ToArray())}");
@@ -122,7 +122,7 @@ public class Strings
     static void String11()
     {
         // String 11. Дана непустая строка S. Вывести строку, содержащую символы строки S, между которыми вставлено по одному пробелу.
-        
+
         Console.Write("Enter text: ");
         string str = Console.ReadLine()!;
         foreach (var t in str)
@@ -142,13 +142,13 @@ public class Strings
         Console.Write("Enter N: ");
         int n = int.Parse(Console.ReadLine()!);
 
-        Console.WriteLine(string.Join(new string('*', n), s.ToCharArray())); // Without ToCharArray doesn't work 
+        Console.WriteLine(string.Join(new string('*', n), s.ToCharArray())); // Without ToCharArray doesn't work
     }
 
     static void String13()
     {
         // String 13. Дана строка. Подсчитать количество содержащихся в ней цифр.
-        
+
         Console.Write("Enter text: ");
         string str = Console.ReadLine()!;
         Console.WriteLine($"Result: {str.Count(char.IsDigit)}");
@@ -157,10 +157,10 @@ public class Strings
     static void String14()
     {
         // String 14. Дана строка. Подсчитать количество содержащихся в ней прописных латинских букв.
-        
+
         Console.Write("Enter a text: ");
         string str = Console.ReadLine()!;
-        Console.WriteLine(str.Count(c => c >= 'A' && c <= 'Z')); 
+        Console.WriteLine(str.Count(c => c >= 'A' && c <= 'Z'));
 
         // Console.WriteLine($"Count of upper letters: {str.Count(char.IsUpper)}"); // #2 Считает буквы всех алфавитов
     }
@@ -168,18 +168,18 @@ public class Strings
     static void String15()
     {
         //String 15. Дана строка. Подсчитать общее количество содержащихся в ней строчных латинских и русских букв.
-        
+
         Console.Write("Enter any text: ");
         string str = Console.ReadLine()!;
         Console.WriteLine(str.Count(c => (c >= 'a' && c <= 'z') || (c >= 'а' && c <= 'я') || c == 'ё'));
-        
+
         // Console.WriteLine(str.Count(char.IsLower)); // #2 Считает также символы других языков
     }
 
     static void String16()
     {
         // String 16. Дана строка. Преобразовать в ней все прописные латинские буквы в строчные
-        
+
         Console.Write("Enter any text: ");
         string text = Console.ReadLine()!;
 
@@ -193,7 +193,7 @@ public class Strings
     static void String17()
     {
         //String 17. Дана строка. Преобразовать в ней все строчные буквы(как латинские, так и русские) в прописные.
-        
+
         Console.Write("Enter any text: ");
         string text = Console.ReadLine()!;
         Console.WriteLine(text.ToUpper());
@@ -202,7 +202,7 @@ public class Strings
     static void String18()
     {
         //String 18. Дана строка. Преобразовать в ней все строчные буквы (как латинские, так и русские) в прописные, а прописные — в строчные.
-        
+
         Console.Write("Enter any text: ");
         string text = Console.ReadLine()!;
         string result = new string(text.Select(c => char.IsLower(c) ? char.ToUpper(c) : char.ToLower(c)).ToArray());
@@ -214,7 +214,7 @@ public class Strings
         //String 19. Дана строка. Если она представляет собой запись целого числа, то вывести 1, если вещественного (с дробной частью) — вывести 2;
         //если строку нельзя преобразовать в число, то вывести 0.
         //Считать, что дробная часть вещественного числа отделяется от его целой части десятичной точкой «.».
-        
+
         Console.Write("Enter any number: ");
         string str = Console.ReadLine()!;
         if (int.TryParse(str, out _))
@@ -229,7 +229,7 @@ public class Strings
     {
         Console.Write("Enter any number: ");
         string str = Console.ReadLine()!;
-        
+
         if (int.TryParse(str, NumberStyles.Integer, CultureInfo.InvariantCulture, out _))
             Console.WriteLine(1);
         else if (double.TryParse(str, NumberStyles.Float, CultureInfo.InvariantCulture, out _) && str.Contains('.'))
@@ -245,7 +245,7 @@ public class Strings
         string number = Console.ReadLine()!;
         for (int i = 0; i < number.Length; i++)
             Console.Write($"{number[i]} ");
-        
+
         // Console.WriteLine(string.Join(" ", number)); // #2
     }
 
@@ -266,7 +266,7 @@ public class Strings
 
         Console.Write("Enter a number: ");
         string number = Console.ReadLine()!;
-        
+
         Console.WriteLine($"Sum: {number.Select(char.GetNumericValue).Sum()}"); // #1
         // Console.WriteLine($"Sum: {number.Select(n => int.Parse(n.ToString())).Sum()}"); // #2
     }
@@ -276,7 +276,7 @@ public class Strings
         // String 23. Дана строка, изображающая арифметическое выражение вида «<цифра>±<цифра>±. . .±<цифра>»,
         // где на месте знака операции «±» находится символ «+» или «−» (например, «4+7−2−8»).
         // Вывести значение данного выражения (целое число).
-        
+
         Console.Write("Enter expression: ");
         string s = Console.ReadLine()!;
 
@@ -287,7 +287,7 @@ public class Strings
 
         Console.WriteLine(result);
     }
-    
+
     static void String24()
     {
         // String 24. Дана строка, изображающая двоичную запись целого положительного числа.
@@ -303,7 +303,7 @@ public class Strings
     {
         // String 25. Дана строка, изображающая десятичную запись целого положительного числа.
         // Вывести строку, изображающую двоичную запись этого же числа.
-        
+
         Console.Write("Enter decimal number: ");
         int n = int.Parse(Console.ReadLine()!);
 
@@ -339,7 +339,7 @@ public class Strings
         // String 26. Дано целое число N (> 0) и строка S. Преобразовать строку S в строку длины N следующим образом:
         // если длина строки S больше N, то отбросить первые символы, если длина строки S меньше N,
         // то в ее начало добавить символы «.» (точка).
-        
+
         Console.Write("Enter N: ");
         int n = int.Parse(Console.ReadLine()!);
         Console.Write("Enter S: ");
@@ -366,8 +366,8 @@ public class Strings
         int n2 = int.Parse(Console.ReadLine()!);
 
         Console.WriteLine(string.Concat(s1.Take(n1)) + string.Concat(s2.TakeLast(n2))); // ✓
-        // Console.WriteLine(new string(s1.Take(n1).ToArray()) + new string(s2.TakeLast(n2).ToArray())); // X 
-        
+        // Console.WriteLine(new string(s1.Take(n1).ToArray()) + new string(s2.TakeLast(n2).ToArray())); // X
+
         //string result = s1[..Math.Min(n1, s1.Length)] + s2[^Math.Min(n2, s2.Length)..]; // Range op variant
         //string result2 = s1.Substring(0, Math.Min(n1, s1.Length)) + s2.Substring(Math.Max(0, s2.Length - n2)); // Simple Substring
     }
@@ -386,7 +386,7 @@ public class Strings
     static void String29()
     {
         // String 29. Дан символ C и строки S, S0. Перед каждым вхождением символа C в строку S вставить строку S0.
-        
+
         Console.Write("Enter C: ");
         char c = char.Parse(Console.ReadLine()!);
         Console.Write("Enter S: ");
@@ -399,7 +399,7 @@ public class Strings
     static void String30()
     {
         // String 30. Дан символ C и строки S, S0. После каждого вхождения символа C в строку S вставить строку S0.
-        
+
         Console.Write("Enter C: ");
         char c = char.Parse(Console.ReadLine()!);
         Console.Write("Enter S: ");
@@ -459,7 +459,7 @@ public class Strings
     {
         // String 33. Даны строки S и S0. Удалить из строки S первую подстроку, совпадающую с S0.
         // Если совпадающих подстрок нет, то вывести строку S без изменений.
-        
+
         Console.Write("Enter S: ");
         string s = Console.ReadLine()!;
         Console.Write("Enter S0: ");
@@ -477,14 +477,14 @@ public class Strings
     {
         // String 34. Даны строки S и S0. Удалить из строки S последнюю подстроку, совпадающую с S0.
         // Если совпадающих подстрок нет, то вывести строку S без изменений.
-        
+
         Console.Write("Enter S: ");
         string s = Console.ReadLine()!;
         Console.Write("Enter S0: ");
         string s0 = Console.ReadLine()!;
-        
+
         int index = s.LastIndexOf(s0);
-        
+
         if (index != -1)
             s = s.Remove(index, s0.Length);
 
@@ -495,7 +495,7 @@ public class Strings
     {
         // String 35. Даны строки S и S0. Удалить из строки S все подстроки, совпадающие с S0.
         // Если совпадающих подстрок нет, то вывести строку S без изменений.
-        
+
         Console.Write("Enter S: ");
         string s = Console.ReadLine()!;
         Console.Write("Enter S0: ");
@@ -507,14 +507,14 @@ public class Strings
     static void String36()
     {
         // String 36. Даны строки S, S1 и S2. Заменить в строке S первое вхождение строки S1 на строку S2.
-        
+
         Console.Write("Enter S: ");
         string s = Console.ReadLine()!;
         Console.Write("Enter S1: ");
         string s1 = Console.ReadLine()!;
         Console.Write("Enter S2: ");
         string s2 = Console.ReadLine()!;
-        
+
         int index = s.IndexOf(s1);
 
         if (index != -1)
@@ -526,14 +526,14 @@ public class Strings
     static void String37()
     {
         // String 37. Даны строки S, S1 и S2. Заменить в строке S последнее вхождение строки S1 на строку S2.
-        
+
         Console.Write("Enter S: ");
         string s = Console.ReadLine()!;
         Console.Write("Enter S1: ");
         string s1 = Console.ReadLine()!;
         Console.Write("Enter S2: ");
         string s2 = Console.ReadLine()!;
-        
+
         int index = s.LastIndexOf(s1);
 
         if (index != -1)
@@ -545,7 +545,7 @@ public class Strings
     static void String38()
     {
         // String 38. Даны строки S, S1 и S2. Заменить в строке S все вхождения строки S1 на строку S2.
-        
+
         Console.Write("Enter S: ");
         string s = Console.ReadLine()!;
         Console.Write("Enter S1: ");
@@ -554,7 +554,7 @@ public class Strings
         string s2 = Console.ReadLine()!;
 
         Console.WriteLine(s.Replace(s1, s2));
-    } 
+    }
 
     static void String39()
     {
@@ -631,7 +631,7 @@ public class Strings
     {
         // String 43. Дана строка, состоящая из русских слов, набранных заглавными буквами и разделенных пробелами (одним или несколькими).
         // Найти количество слов, которые содержат хотя бы одну букву «А».
-        
+
         string str = Console.ReadLine()!;
         Console.WriteLine(str.Split(' ', StringSplitOptions.RemoveEmptyEntries).Count(s => s.Contains('А')));
     }
@@ -640,7 +640,7 @@ public class Strings
     {
         // String 44. Дана строка, состоящая из русских слов, набранных заглавными буквами и разделенных пробелами (одним или несколькими).
         // Найти количество слов, которые содержат ровно три буквы «А».
-        
+
         Console.Write("Enter a text: ");
         string s = Console.ReadLine()!;
         var count = s.Split(' ', StringSplitOptions.RemoveEmptyEntries).Count(c => c.Count(ch => ch == 'A') == 3);
@@ -650,13 +650,13 @@ public class Strings
     static void String45()
     {
         // String 45. Дана строка, состоящая из русских слов, разделенных пробелами (одним или несколькими). Найти длину самого короткого слова.
-        
+
         Console.Write("Enter a text: ");
         string s = Console.ReadLine()!;
         var minLength = s.Split(' ', StringSplitOptions.RemoveEmptyEntries).Min(c => c.Length);
         Console.WriteLine($"Min length: {minLength}");
     }
-    
+
     static void String47()
     {
         //String 47. Дана строка, состоящая из русских слов, разделенных пробелами (одним или несколькими).
@@ -673,7 +673,7 @@ public class Strings
         // String 48. Дана строка, состоящая из русских слов, набранных заглавными буквами и разделенных пробелами (одним или несколькими).
         // Преобразовать каждое слово в строке, заменив в нем все последующие вхождения его первой буквы на символ «.» (точка).
         // Например, слово «МИНИМУМ» надо преобразовать в «МИНИ.У.». Количество пробелов между словами не изменять.
-        
+
         Console.Write("Enter a text: ");
         string str = Console.ReadLine()!;
         var words = str.Split(' ', StringSplitOptions.RemoveEmptyEntries);
@@ -692,7 +692,7 @@ public class Strings
         // String 49. Дана строка, состоящая из русских слов, набранных заглавными буквами и разделенных пробелами (одним или несколькими).
         // Преобразовать каждое слово в строке, заменив в нем все предыдущие вхождения его последней буквы на символ «.» (точка).
         // Например, слово «МИНИМУМ» надо преобразовать в «.ИНИ.УМ». Количество пробелов между словами не изменять.
-        
+
         // Console.Write("Enter a text: ");
         // string str = Console.ReadLine()!;
         // var words = str.Split(' ', StringSplitOptions.RemoveEmptyEntries);
@@ -713,7 +713,7 @@ public class Strings
     {
         // String 51. Дана строка, состоящая из русских слов, набранных заглавными буквами и разделенных пробелами (одним или несколькими).
         // Вывести строку, содержащую эти же слова, разделенные одним пробелом и расположенные в алфавитном порядке.
-        
+
         Console.Write("Enter a text: ");
         string str = Console.ReadLine()!;
         Console.WriteLine(string.Join(" ", str.Split(' ', StringSplitOptions.RemoveEmptyEntries).Order()));
@@ -723,16 +723,11 @@ public class Strings
     {
         // String 52. Дана строка-предложение на русском языке. Преобразовать строку так, чтобы каждое слово начиналось с заглавной буквы.
         // Словом считать набор символов, не содержащий пробелов и ограниченный пробелами или началом/концом строки. Слова, не начинающиеся с буквы, не изменять
-        
+
         Console.Write("Enter a text: ");
         string str = Console.ReadLine()!;
-        string result = string.Join(" ",
-            str.Split(' ', StringSplitOptions.RemoveEmptyEntries)
-                .Select(w =>
-                    char.IsLetter(w[0])
-                        ? char.ToUpper(w[0]) + w[1..]
-                        : w
-                )
+        string result = string.Join(" ", str.Split(' ', StringSplitOptions.RemoveEmptyEntries)
+            .Select(w => char.IsLetter(w[0]) ? char.ToUpper(w[0]) + w[1..] : w)
         );
 
         Console.WriteLine(result);
@@ -741,7 +736,7 @@ public class Strings
     static void String53()
     {
         // String 53. Дана строка-предложение на русском языке. Подсчитать количество содержащихся в строке знаков препинания.
-        
+
         Console.Write("Enter a text: ");
         string str = Console.ReadLine()!;
         Console.WriteLine(str.Count(char.IsPunctuation));
@@ -750,7 +745,7 @@ public class Strings
     static void String54()
     {
         // String 54. Дана строка-предложение на русском языке. Подсчитать количество содержащихся в строке гласных букв.
-        
+
         Console.Write("Enter a text: ");
         string str = Console.ReadLine()!;
 
@@ -782,7 +777,7 @@ public class Strings
         string[] words = str.Split([' ', '.', ',', '!', '?', ':', ';', '-', '—', '(', ')', '"', '\''], StringSplitOptions.RemoveEmptyEntries);
         Console.WriteLine(words.Min(w => w.Length));
     }
-    
+
     static void String57()
     {
         // String 57. Дана строка-предложение с избыточными пробелами между слова
@@ -790,7 +785,7 @@ public class Strings
 
         Console.Write("Enter a text: ");
         string str = Console.ReadLine()!;
-        
+
         // Это разбивает по любым пробельным символам (пробел, табуляция, перевод строки и т.д.).
         // Фишка в том, что null в Split((char[])null, ...) означает использовать все стандартные пробельные символы. Без него Split() не сможет разбить табуляцию!
         Console.WriteLine(string.Join(" ", str.Split((char[])null!, StringSplitOptions.RemoveEmptyEntries)));
@@ -801,7 +796,7 @@ public class Strings
     {
         // String 58. Дана строка, содержащая полное имя файла, то есть имя диска, список каталогов (путь), собственно имя и расширение.
         // Выделить из этой строки имя файла (без расширения)
-        
+
         Console.Write("Enter a text: ");
         string str = Console.ReadLine()!;
         Console.WriteLine(string.Concat(str.Split('\\').Last().TakeWhile(c => c != '.')));
@@ -828,7 +823,7 @@ public class Strings
     {
         // String 60. Дана строка, содержащая полное имя файла. Выделить из этой строки название первого каталога (без символов «\»).
         // Если файл содержится в корневом каталоге, то вывести символ «\».
-        
+
         Console.Write("Enter full path: ");
         string path = Console.ReadLine()!;
         string[] parts = path.Split('\\', StringSplitOptions.RemoveEmptyEntries);
@@ -851,8 +846,8 @@ public class Strings
         // String 62. Дана строка-предложение на русском языке. Зашифровать ее, выполнив циклическую замену каждой буквы на следующую за ней в алфавите
         // и сохранив при этом регистр букв («А» перейдет в «Б», «а» — в «б», «Б» — в «В», «я» — в «а» и т. д.).
         // Букву «ё» в алфавите не учитывать («е» должна переходить в «ж»). Знаки препинания и пробелы не изменять.
-        
-        
+
+
     }
 
     static void String63()
@@ -860,7 +855,7 @@ public class Strings
         // String 63. Дана строка-предложение на русском языке и число K (0 < K < 10).
         // Зашифровать строку, выполнив циклическую замену каждой буквы на букву того же регистра, расположенную в алфавите на K-й позиции после шифруемой буквы
         // (например, для K = 2 «А» перейдет в «В», «а» — в «в», «Б» — в «Г», «я» — в «б» и т. д.). Букву «ё» в алфавите не учитывать, знаки препинания и пробелы не изменять
-        
+
         Console.Write("Введите ключ: ");
         int key = int.Parse(Console.ReadLine()!);
         Console.Write("Введите текст: ");
@@ -876,10 +871,10 @@ public class Strings
                 if (text[i] == engLetters[j]) // в случае совпадения, создаю переменную, где храню номер буквы со сдвигом
                 {
                     letterNumber = j + key; // номер буквы + сдвиг по ключу
- 
+
                     while (letterNumber >= engLetters.Length) // чтобы новая буква не уходила за рамки алфавита
                         letterNumber -= engLetters.Length;
- 
+
                     result += engLetters[letterNumber]; // заношу зашифрованную букву в переменную, для ее хранения
                 }
 
@@ -890,13 +885,13 @@ public class Strings
         Console.WriteLine("Зашифрованное слово: " + result);
         Console.ReadLine();
     }
-    
+
     public static void Main()
     {
         // Изучить StringBuilder
         String59();
         Console.ReadLine();
-        
+
         // if (double.TryParse(Console.ReadLine(), new CultureInfo("en-US"), out _))
         //      Console.WriteLine("It's a float number");
     }
