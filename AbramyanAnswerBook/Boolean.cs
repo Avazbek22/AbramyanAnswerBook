@@ -172,7 +172,7 @@
 // int b = int.Parse(Console.ReadLine()!);
 // Console.Write("Enter C: ");
 // int c = int.Parse(Console.ReadLine()!);
-// bool hasMutuallyOpposite = a == -b || a == -c || b == -c;
+// bool hasMutuallyOpposite = a == -b || a == -c || b == -c || b == -a || c == -a || c == -b;
 // Console.WriteLine(hasMutuallyOpposite);
 
 // Boolean 20. Дано трехзначное число. Проверить истинность высказывания: «Все цифры данного числа различны».
@@ -182,7 +182,7 @@
 // int b = int.Parse(Console.ReadLine()!);
 // Console.Write("Enter C: ");
 // int c = int.Parse(Console.ReadLine()!);
-// bool allIsDifferent = a != b && b != c ;
+// bool allIsDifferent = a != b && b != c && a != c;
 // Console.WriteLine(allIsDifferent);
 
 // Boolean 21. Дано трехзначное число. Проверить истинность высказывания: «Цифры данного числа образуют возрастающую последовательность».

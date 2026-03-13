@@ -133,6 +133,7 @@
 // Console.WriteLine($"Sum = {sum}");
 
 //For 11. Дано целое число N (> 0). Найти сумму N^2 + (N + 1)^2 + (N + 2)^2 + ... + (2·N)^2 (целое число).
+// Variant #2
 // Console.Write("Enter N: ");
 // int n = int.Parse(Console.ReadLine()!);
 // int sum = 0;
