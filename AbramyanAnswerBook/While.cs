@@ -194,8 +194,8 @@
 // while (n > 0)
 // {
 //     if ((n % 10) % 2 == 1)
-//         hasOdd = true; 
-//     
+//         hasOdd = true;
+//
 //     n /= 10;
 // }
 // Console.WriteLine(hasOdd);

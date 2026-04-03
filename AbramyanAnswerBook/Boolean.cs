@@ -201,7 +201,7 @@
 // int b = int.Parse(Console.ReadLine()!);
 // Console.Write("Enter C: ");
 // int c = int.Parse(Console.ReadLine()!);
-// bool isIncreasingOrDecreasingSequence = a < b && b < c || a > b && b >c;
+// bool isIncreasingOrDecreasingSequence = a < b && b < c || a > b && b > c;
 // Console.WriteLine(isIncreasingOrDecreasingSequence);
 
 // Boolean 23. Дано четырехзначное число. Проверить истинность высказывания: «Данное число читается одинаково слева направо и справа налево»
