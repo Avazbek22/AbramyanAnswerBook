@@ -15,7 +15,7 @@
 // int a = int.Parse(Console.ReadLine()!);
 // Console.WriteLine($"Area: {a * a}");
 
-//Begin 3. Даны стороны прямоугольника a и b. Найти его площадь S = a·b и периметр P = 2·(a + b).
+// Begin 3. Даны стороны прямоугольника a и b. Найти его площадь S = a·b и периметр P = 2·(a + b).
 // Console.Write("Enter A: ");
 // int a = int.Parse(Console.ReadLine()!);
 // Console.Write("Enter B: ");
@@ -120,7 +120,7 @@
 // Console.WriteLine($"B: {b}");
 
 // Begin 22. Поменять местами содержимое переменных A и B и вывести новые значения A и B.
-//Вариант 2: Через конструкцию языка (кортеж)
+// Вариант 2: Через конструкцию языка (кортеж)
 // Console.Write("Enter A: ");
 // int a = int.Parse(Console.ReadLine()!);
 // Console.Write("Enter B: ");
