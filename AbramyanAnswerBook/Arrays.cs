@@ -1292,6 +1292,14 @@ namespace AbramyanAnswerBook
             Console.WriteLine("0");
         }
 
+        static void Array49_SimpleVersion()
+        {
+            Console.Write("Enter N: ");
+            int[] array = Enumerable.Range(1, int.Parse(Console.ReadLine()!)).ToArray();
+
+            Console.WriteLine(array.Sum() == Enumerable.Range(1, array.Length).Sum());
+        }
+
         static void Array50()
         {
             // Array 50. Дан целочисленный массив A размера N, являющийся перестановкой.
@@ -1590,6 +1598,40 @@ namespace AbramyanAnswerBook
             Console.WriteLine($"Quantity arrayB : {arrayB.Length}");
             ShowArray(arrayC);
             Console.WriteLine($"Quantity arrayC : {arrayC.Length}");
+        }
+
+        static void Array63() // by Nikolay
+        {
+            //Array63. Даны два массива A и B размера 5, элементы которых упорядочены
+            //по возрастанию. Объединить эти массивы так, чтобы результирующий
+            //массив C (размера 10) остался упорядоченным по возрастанию.
+
+            int[] arrayA = { 1, 3, 5, 7, 90 };
+            int[] arrayB = { 0, 40, 60, 80, 100 };
+            Console.WriteLine("Array A:");
+            ShowArray(arrayA);
+            Console.WriteLine("Array B:");
+            ShowArray(arrayB);
+
+            int[] arrayC = new int[10];
+            int idxA = 0, idxB = 0, idxC = 0;
+
+            while (idxA < 5 && idxB < 5)
+            {
+                if (arrayA[idxA] < arrayB[idxB])
+                    arrayC[idxC++] = arrayA[idxA++];
+                else
+                    arrayC[idxC++] = arrayB[idxB++];
+            }
+
+            while (idxA < 5)
+                arrayC[idxC++] = arrayA[idxA++];
+
+            while (idxB < 5)
+                arrayC[idxC++] = arrayB[idxB++];
+
+            Console.WriteLine("Merged Array C:");
+            ShowArray(arrayC);
         }
 
         static void Array65()
