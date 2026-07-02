@@ -403,7 +403,7 @@
 //         Console.Write("Enter C: ");
 //         char c = char.Parse(Console.ReadLine()!);
 //         Console.Write("Enter S: ");
-//         string s = Console.ReadLine()!;;
+//         string s = Console.ReadLine()!;
 //         Console.Write("Enter S0: ");
 //         string s0 = Console.ReadLine()!;
 //         Console.WriteLine(s.Replace(c.ToString(), $"{c}{s0}"));
