@@ -272,6 +272,7 @@
 // Console.WriteLine($"Sum = {sum}");
 
 // For 18. Дано вещественное число A и целое число N (>0). Используя один цикл, найти значение выражения 1+A+A^2 A^3+ +( 1)^N*A^N
+// Variant #1
 // Console.Write("Enter A: ");
 // int a = int.Parse(Console.ReadLine()!);
 // Console.Write("Enter N: ");
@@ -284,6 +285,21 @@
 //     degree *= -1;
 //     Console.WriteLine(sum);
 // }
+
+// For 18. Дано вещественное число A и целое число N (>0). Используя один цикл, найти значение выражения 1+A+A^2 A^3+ +( 1)^N*A^N
+// Variant #2
+// Console.Write("Enter A: ");
+// double a = double.Parse(Console.ReadLine()!);
+// Console.Write("Enter N: ");
+// int n = int.Parse(Console.ReadLine()!);
+// double sum = 1;
+// double power = 1;
+// for (int i = 1; i <= n; i++)
+// {
+//     power *= -a;
+//     sum += power;
+// }
+// Console.WriteLine($"Result = {sum}");
 
 // For 19. Дано целое число N (> 0). Найти произведение N! = 1·2·. . .·N (N–факториал).
 // Чтобы избежать целочисленного переполнения, вычислять это произведение с помощью вещественной переменной и вывести его как вещественное число.
