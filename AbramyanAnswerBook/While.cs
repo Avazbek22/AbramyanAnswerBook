@@ -1,4 +1,4 @@
-// While 4, 5, 17, 18, 20, 21, 24-27
+// While 1-4, 5, 17, 18, 20, 21, 24-27
 
 // Путь к сеньору: https://www.youtube.com/watch?v=e8Nm-5QBfqs&list=PL5lgqZ5vlRRYAgjoNF240pV86qP0JOEEg&index=12&ab_channel=%D0%9F%D1%83%D1%82%D1%8C%D0%BASenior-%D1%83
 
