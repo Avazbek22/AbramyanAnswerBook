@@ -151,7 +151,6 @@
 //
 //     switch (n % 10) //единицы
 //     {
-//         case 0: Console.WriteLine("учебных заданий"); return;
 //         case 1: Console.Write("одно учебное задание"); return;
 //         case 2: Console.Write("два учебных задания"); return;
 //         case 3: Console.Write("три учебных задания"); return;
