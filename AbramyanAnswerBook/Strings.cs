@@ -125,10 +125,10 @@
 //
 //         Console.Write("Enter text: ");
 //         string str = Console.ReadLine()!;
-//         foreach (var t in str)
-//             Console.Write(t + " ");
+//         // foreach (var t in str)
+//         //     Console.Write(t + " ");
 //
-//         // Console.WriteLine(string.Join(" ", str)); // #2
+//          Console.WriteLine(string.Join(" ", str)); // #2 need to char array
 //         // Console.WriteLine(string.Join(" ", str.ToCharArray())); // #3 without space at end
 //     }
 //
@@ -889,10 +889,6 @@
 //     public static void Main()
 //     {
 //         // Изучить StringBuilder
-//         String59();
-//         Console.ReadLine();
-//
-//         // if (double.TryParse(Console.ReadLine(), new CultureInfo("en-US"), out _))
-//         //      Console.WriteLine("It's a float number");
+//         String11();
 //     }
 // }
